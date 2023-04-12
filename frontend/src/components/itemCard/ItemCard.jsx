@@ -1,16 +1,6 @@
 import pizza from "@assets/pizza.png";
-import { useState } from "react";
 
 function ItemCard() {
-  const [quantity, setQuantity] = useState(0);
-
-  const handleClickAdd = () => {
-    setQuantity(quantity + 1);
-  };
-  const handleClickRemove = () => {
-    setQuantity(quantity - 1);
-  };
-
   return (
     <div className="item-container">
       <img className="img-details-container" src={pizza} alt="Pizza" />
@@ -22,9 +12,7 @@ function ItemCard() {
       <div className="icons-details-container">
         <span className="">A</span>
 
-  
-
-        <span className="quantity">Quantité =&gt; {quantity}</span>
+        <span className="quantity">Quantité =&gt; 200</span>
         <span className="material-symbols-outlined">star</span>
       </div>
     </div>
