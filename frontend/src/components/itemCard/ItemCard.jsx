@@ -9,6 +9,12 @@ function ItemCard() {
     setQuantity(quantity + 1);
   };
 
+  const handleClickRemove = () => {
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
+    }
+  };
+
   return (
     <div className="item-container">
       <img className="img-details-container" src={pizza} alt="Pizza" />
@@ -19,6 +25,7 @@ function ItemCard() {
       <span className="nutriScore-icon">A</span>
       <div className="icons-details-container">
         <span className="">A</span>
+        <ItemCardQuantityButton onClick={handleClickRemove} icon="remove" />
         <ItemCardQuantityButton onClick={handleClickAdd} icon="add" />
         <span className="quantity">Quantité =&gt; 2</span>
         <span className="material-symbols-outlined">star</span>
