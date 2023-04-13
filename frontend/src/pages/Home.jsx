@@ -1,3 +1,5 @@
-export default function Home() {
+function Home() {
   return <header />;
 }
+
+export default Home;

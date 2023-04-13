@@ -1,9 +1,11 @@
 import ButtonBasket from "@components/ButtonBasket";
 
-export default function Basket() {
+function Basket() {
   return (
     <header>
       <ButtonBasket />
     </header>
   );
 }
+
+export default Basket;
