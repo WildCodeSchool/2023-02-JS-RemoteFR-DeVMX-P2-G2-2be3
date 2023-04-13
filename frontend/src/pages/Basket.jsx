@@ -1,5 +1,12 @@
+/* eslint-disable import/no-unresolved */
+import ButtonBasket from "@components/ButtonBasket";
+
 function Basket() {
-  return <div>Basket</div>;
+  return (
+    <header>
+      <ButtonBasket />
+    </header>
+  );
 }
 
 export default Basket;
