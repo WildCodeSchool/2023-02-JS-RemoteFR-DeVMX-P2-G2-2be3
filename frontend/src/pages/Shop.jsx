@@ -1,9 +1,21 @@
 import ButtonBasket from "@components/ButtonBasket";
+import ItemCard from "@components/itemCard/ItemCard";
+import SearchBar from "@components/SearchBar";
 
-export default function Shop() {
+function Shop() {
   return (
-    <header>
-      <ButtonBasket />
-    </header>
+    <div>
+      <header>
+        <ButtonBasket />
+      </header>
+      <SearchBar />
+      <ItemCard />
+      <ItemCard />
+      <ItemCard />
+      <ItemCard />
+    </div>
   );
 }
+
+export default Shop;
+
