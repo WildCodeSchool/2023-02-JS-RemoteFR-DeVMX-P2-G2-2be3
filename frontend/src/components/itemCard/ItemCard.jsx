@@ -20,7 +20,7 @@ function ItemCard() {
       <div className="icons-details-container">
         <span className="">A</span>
         <ItemCardQuantityButton onClick={handleClickAdd} icon="add" />
-        <span className="quantity">Quantité =&gt; 2</span>
+        <span className="quantity">Quantité =&gt; 200</span>
         <span className="material-symbols-outlined">star</span>
       </div>
     </div>
