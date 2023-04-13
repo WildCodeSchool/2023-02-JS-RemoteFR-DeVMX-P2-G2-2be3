@@ -1,3 +1,5 @@
+/* eslint-disable import/no-unresolved */
+
 import Home from "@pages/Home";
 import Shop from "@pages/Shop";
 import Basket from "@pages/Basket";
