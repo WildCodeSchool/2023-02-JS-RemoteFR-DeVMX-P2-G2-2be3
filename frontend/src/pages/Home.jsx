@@ -5,6 +5,7 @@ import UserPassword from "@components/UserPassword";
 function Home() {
   return (
     <div>
+      <header />
       <UserEmail />
       <UserPassword />
     </div>
