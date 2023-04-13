@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import pizza from "@assets/pizza.png";
 import { useState } from "react";
 import ItemCardQuantityButton from "./ItemCardQuantityButton";
