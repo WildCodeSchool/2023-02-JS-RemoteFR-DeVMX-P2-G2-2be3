@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import Basket from "@pages/Basket";
 
 import "./App.css";
