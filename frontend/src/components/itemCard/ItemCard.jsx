@@ -3,7 +3,7 @@ import pizza from "@assets/pizza.png";
 import { useState } from "react";
 import ItemCardQuantityButton from "./ItemCardQuantityButton";
 
-import "../../style/shopStyle/ItemCard.css";
+import "../../style/shopStyle/itemCard/ItemCard.css";
 
 function ItemCard() {
   const [quantity, setQuantity] = useState(0);
@@ -29,8 +29,10 @@ function ItemCard() {
       <div className="icons-details-container">
         <span className="material-symbols-outlined">star</span>
         <span className="quantity">2</span>
-        <ItemCardQuantityButton onClick={handleClickRemove} icon="remove" />
-        <ItemCardQuantityButton onClick={handleClickAdd} icon="add" />
+        <div className="button-quantity-container">
+          <ItemCardQuantityButton onClick={handleClickRemove} icon="remove" />
+          <ItemCardQuantityButton onClick={handleClickAdd} icon="add" />
+        </div>
       </div>
     </div>
   );
