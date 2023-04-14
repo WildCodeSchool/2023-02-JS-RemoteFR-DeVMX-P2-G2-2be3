@@ -4,8 +4,8 @@ import "../../style/shopStyle/itemCard/ItemCardQuantityButton.css";
 
 function ItemCardQuantityButton({ icon }) {
   return (
-    <button type="button">
-      <span className="material-symbols-outlined">{icon}</span>
+    <button type="button" className="itemCard-quantity-button">
+      <span className="material-symbols-outlined"> {icon}</span>
     </button>
   );
 }
