@@ -4,6 +4,8 @@ import ItemCard from "@components/itemCard/ItemCard";
 import SearchBar from "@components/SearchBar";
 import NetworkFooter from "@components/NetworkFooter";
 
+import "../style/Shop.css";
+
 function Shop() {
   return (
     <div>
@@ -11,10 +13,12 @@ function Shop() {
         <ButtonBasket />
       </header>
       <SearchBar />
-      <ItemCard />
-      <ItemCard />
-      <ItemCard />
-      <ItemCard />
+      <section className="itemCard-section">
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+      </section>
       <footer>
         <NetworkFooter />
       </footer>

@@ -1,9 +1,11 @@
 import PropTypes from "prop-types";
 
+import "../../style/shopStyle/itemCard/ItemCardQuantityButton.css";
+
 function ItemCardQuantityButton({ icon }) {
   return (
-    <button type="button" className="material-symbols-outlined">
-      {icon}
+    <button type="button" className="itemCard-quantity-button">
+      <span className="material-symbols-outlined"> {icon}</span>
     </button>
   );
 }
