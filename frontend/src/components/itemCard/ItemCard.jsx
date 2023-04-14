@@ -3,6 +3,8 @@ import pizza from "@assets/pizza.png";
 import { useState } from "react";
 import ItemCardQuantityButton from "./ItemCardQuantityButton";
 
+import "../../style/shopStyle/itemCard/ItemCard.css";
+
 function ItemCard() {
   const [quantity, setQuantity] = useState(0);
 
@@ -17,7 +19,7 @@ function ItemCard() {
   };
 
   return (
-    <div className="item-container">
+    <div className="itemCard-container">
       <img className="img-details-container" src={pizza} alt="Pizza" />
       <div className="description-details-container">
         <h2>La pizza tomate</h2>
@@ -25,11 +27,12 @@ function ItemCard() {
       </div>
       <span className="nutriScore-icon">A</span>
       <div className="icons-details-container">
-        <span className="">A</span>
-        <ItemCardQuantityButton onClick={handleClickRemove} icon="remove" />
-        <ItemCardQuantityButton onClick={handleClickAdd} icon="add" />
-        <span className="quantity">Quantité =&gt; 200</span>
         <span className="material-symbols-outlined">star</span>
+        <span className="quantity">2</span>
+        <div className="button-quantity-container">
+          <ItemCardQuantityButton onClick={handleClickRemove} icon="remove" />
+          <ItemCardQuantityButton onClick={handleClickAdd} icon="add" />
+        </div>
       </div>
     </div>
   );

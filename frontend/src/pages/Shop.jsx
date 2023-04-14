@@ -3,6 +3,8 @@ import ButtonBasket from "@components/ButtonBasket";
 import ItemCard from "@components/itemCard/ItemCard";
 import SearchBar from "@components/SearchBar";
 
+import "../style/Shop.css";
+
 function Shop() {
   return (
     <div>
@@ -10,10 +12,12 @@ function Shop() {
         <ButtonBasket />
       </header>
       <SearchBar />
-      <ItemCard />
-      <ItemCard />
-      <ItemCard />
-      <ItemCard />
+      <section className="itemCard-section">
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+      </section>
     </div>
   );
 }
