@@ -12,6 +12,9 @@ function Basket() {
     <div>
       <header>
         <img src={ImageLogo} alt="" />
+        <div>
+          <h3>Bonjour Toto</h3>
+        </div>
         <ButtonBasket />
       </header>
       <ButtonReturn />
