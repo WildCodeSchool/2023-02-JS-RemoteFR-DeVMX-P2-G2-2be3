@@ -2,6 +2,7 @@
 import ButtonBasket from "@components/ButtonBasket";
 import ItemCard from "@components/itemCard/ItemCard";
 import SearchBar from "@components/SearchBar";
+import ImageLogo from "@assets/NutriDrive_02_02.jpeg";
 
 import "../style/Shop.css";
 
@@ -9,6 +10,7 @@ function Shop() {
   return (
     <div>
       <header>
+        <img src={ImageLogo} alt="" />
         <ButtonBasket />
       </header>
       <SearchBar />
