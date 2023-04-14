@@ -1,11 +1,17 @@
 /* eslint-disable import/no-unresolved */
 import ButtonBasket from "@components/ButtonBasket";
+import NetworkFooter from "@components/NetworkFooter";
 
 function Basket() {
   return (
-    <header>
-      <ButtonBasket />
-    </header>
+    <div>
+      <header>
+        <ButtonBasket />
+      </header>
+      <footer>
+        <NetworkFooter />
+      </footer>
+    </div>
   );
 }
 

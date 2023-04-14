@@ -2,6 +2,7 @@
 import ButtonBasket from "@components/ButtonBasket";
 import ItemCard from "@components/itemCard/ItemCard";
 import SearchBar from "@components/SearchBar";
+import NetworkFooter from "@components/NetworkFooter";
 
 function Shop() {
   return (
@@ -14,6 +15,9 @@ function Shop() {
       <ItemCard />
       <ItemCard />
       <ItemCard />
+      <footer>
+        <NetworkFooter />
+      </footer>
     </div>
   );
 }
