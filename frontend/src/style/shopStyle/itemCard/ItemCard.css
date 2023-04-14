@@ -49,14 +49,10 @@
   flex-direction: column;
 }
 
-
 .button-quantity-container {
   display: flex;
-} /*# sourceMappingURL=ItemCard.css.map */
-
+}
 
 .nutriScore-icon {
   margin-right: 1rem;
-}/*# sourceMappingURL=ItemCard.css.map */
-
-
+} /*# sourceMappingURL=ItemCard.css.map */
