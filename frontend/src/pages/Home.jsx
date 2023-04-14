@@ -1,14 +1,23 @@
 /* eslint-disable import/no-unresolved */
 import UserEmail from "@components/UserEmail";
 import UserPassword from "@components/UserPassword";
+import ButtonConnect from "@components/ButtonConnect";
+import LogoNutriDrive from "@assets/NutriDrive_logo_home.png/";
+
+import "../style/Home.css";
 
 function Home() {
   return (
-    <div>
-      <header />
-      <UserEmail />
-      <UserPassword />
-    </div>
+    <body>
+      <main>
+        <img className="imgLogoHome" src={LogoNutriDrive} alt="logo" />
+        <div className="formConnect">
+          <UserEmail />
+          <UserPassword />
+          <ButtonConnect />
+        </div>
+      </main>
+    </body>
   );
 }
 

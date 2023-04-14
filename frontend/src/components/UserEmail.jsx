@@ -1,7 +1,11 @@
 function UserEmailLogin() {
   return (
     <div>
-      <input type="email" placeholder="Entrez votre adresse email" />
+      <input
+        className="inputEmail"
+        type="email"
+        placeholder="Entrez votre adresse email"
+      />
     </div>
   );
 }
