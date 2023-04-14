@@ -1,7 +1,9 @@
 /* eslint-disable import/no-unresolved */
 import UserEmail from "@components/UserEmail";
 import UserPassword from "@components/UserPassword";
+import NetworkFooter from "@components/NetworkFooter";
 import ButtonConnect from "@components/ButtonConnect";
+
 import LogoNutriDrive from "@assets/NutriDrive_logo_home.png/";
 
 import "../style/Home.css";
@@ -17,6 +19,9 @@ function Home() {
           <ButtonConnect />
         </div>
       </main>
+      <footer>
+        <NetworkFooter />
+      </footer>
     </body>
   );
 }

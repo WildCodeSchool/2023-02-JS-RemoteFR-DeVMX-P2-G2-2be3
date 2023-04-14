@@ -28,7 +28,7 @@ function ItemCard() {
       <span className="nutriScore-icon">A</span>
       <div className="icons-details-container">
         <span className="material-symbols-outlined">star</span>
-        <span className="quantity">2</span>
+        <span>{quantity}</span>
         <div className="button-quantity-container">
           <ItemCardQuantityButton onClick={handleClickRemove} icon="remove" />
           <ItemCardQuantityButton onClick={handleClickAdd} icon="add" />
