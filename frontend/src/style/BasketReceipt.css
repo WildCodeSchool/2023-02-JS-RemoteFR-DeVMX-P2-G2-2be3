@@ -1,0 +1,37 @@
+.receiptContainer {
+  background-color: #f7f5ea;
+  width: 45%;
+  border: 1px solid black;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.img-nutridrive_logo {
+  width: 80%;
+  margin: 0.5rem;
+}
+
+.receiptContainer h2 {
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+.receipt-details {
+  font-size: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.receiptContainer h1 {
+  font-weight: lighter;
+  font-size: 1rem;
+  margin: 0.3rem;
+}
+
+.img-qrcode {
+  width: 50%;
+  margin: auto;
+}
