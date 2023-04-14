@@ -1,11 +1,18 @@
 /* eslint-disable import/no-unresolved */
 import ButtonBasket from "@components/ButtonBasket";
+import ButtonReturn from "@components/basket/ButtonReturn";
+import ButtonValide from "@components/basket/ButtonValide";
 
 function Basket() {
   return (
-    <header>
-      <ButtonBasket />
-    </header>
+    <div>
+      <header>
+        <ButtonBasket />
+      </header>
+
+      <ButtonReturn />
+      <ButtonValide />
+    </div>
   );
 }
 
