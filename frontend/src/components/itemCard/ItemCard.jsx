@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable import/no-unresolved */
 import pizza from "@assets/pizza.png";
 import { useState } from "react";
@@ -7,6 +9,7 @@ import "../../style/shopStyle/itemCard/ItemCard.css";
 
 function ItemCard() {
   const [quantity, setQuantity] = useState(0);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   const handleClickAdd = () => {
     setQuantity(quantity + 1);
@@ -18,6 +21,10 @@ function ItemCard() {
     }
   };
 
+  const handleClickIsFavorite = () => {
+    setIsFavorite(!isFavorite);
+  };
+
   return (
     <div className="itemCard-container">
       <img className="img-details-container" src={pizza} alt="Pizza" />
@@ -27,7 +34,16 @@ function ItemCard() {
       </div>
       <span className="nutriScore-icon">A</span>
       <div className="icons-details-container">
-        <span className="material-symbols-outlined">star</span>
+        <span
+          onClick={handleClickIsFavorite}
+          className={
+            isFavorite
+              ? "material-symbols-outlined favorite-icon isFavorite"
+              : "material-symbols-outlined favorite-icon"
+          }
+        >
+          star
+        </span>
         <span>{quantity}</span>
         <div className="button-quantity-container">
           <ItemCardQuantityButton onClick={handleClickRemove} icon="remove" />

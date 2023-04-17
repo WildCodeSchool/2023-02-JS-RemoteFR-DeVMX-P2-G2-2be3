@@ -55,4 +55,12 @@
 
 .nutriScore-icon {
   margin-right: 1rem;
-} /*# sourceMappingURL=ItemCard.css.map */
+}
+
+.favorite-icon {
+  cursor: pointer;
+}
+
+.isFavorite {
+  color: orange;
+}/*# sourceMappingURL=ItemCard.css.map */
