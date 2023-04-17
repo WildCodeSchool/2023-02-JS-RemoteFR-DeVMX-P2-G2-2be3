@@ -10,7 +10,7 @@ import "../style/Home.css";
 
 function Home() {
   return (
-    <body>
+    <div className="body">
       <main>
         <img className="imgLogoHome" src={LogoNutriDrive} alt="logo" />
         <div className="formConnect">
@@ -22,7 +22,7 @@ function Home() {
       <footer>
         <NetworkFooter />
       </footer>
-    </body>
+    </div>
   );
 }
 
