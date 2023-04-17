@@ -1,10 +1,10 @@
+import { Link } from "react-router-dom";
+
 function ButtonConnexion() {
   return (
-    <a href="@pages/Shop">
-      <button type="button" className="buttonConnect">
-        Connexion
-      </button>
-    </a>
+    <button type="button" className="buttonConnect">
+      <Link to="/Shop">Connexion</Link>
+    </button>
   );
 }
 

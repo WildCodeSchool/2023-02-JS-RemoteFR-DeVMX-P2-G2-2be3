@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 function ButtonBasket() {
   return (
-    <a href="@pages/Basket">
-      <button type="button">Basket</button>
-    </a>
+    <button type="button">
+      <Link to="/basket">Basket</Link>
+    </button>
   );
 }
 
