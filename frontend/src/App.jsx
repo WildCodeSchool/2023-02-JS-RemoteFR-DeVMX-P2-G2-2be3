@@ -8,8 +8,8 @@ import "./App.css";
 function App() {
   return (
     <div className="home">
-      {/* <Home /> */}
-      {/* <Shop /> */}
+      <Home />
+      <Shop />
       <Basket />
     </div>
   );
