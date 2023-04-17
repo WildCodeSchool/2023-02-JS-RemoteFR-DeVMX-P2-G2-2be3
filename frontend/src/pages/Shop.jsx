@@ -1,21 +1,14 @@
 /* eslint-disable import/no-unresolved */
-import ButtonBasket from "@components/ButtonBasket";
+import Header from "@components/header/Header";
 import ItemCard from "@components/itemCard/ItemCard";
 import SearchBar from "@components/SearchBar";
 import NetworkFooter from "@components/NetworkFooter";
-import ImageLogo from "@assets/NutriDrive_02_02.jpeg";
 import "../style/Shop.css";
 
 function Shop() {
   return (
     <div>
-      <header>
-        <img src={ImageLogo} alt="" />
-        <div>
-          <h3>Bonjour Toto</h3>
-        </div>
-        <ButtonBasket />
-      </header>
+      <Header />
       <SearchBar />
       <section className="itemCard-section">
         <ItemCard />
