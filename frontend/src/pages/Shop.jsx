@@ -4,6 +4,7 @@ import ItemCard from "@components/itemCard/ItemCard";
 import SearchBar from "@components/SearchBar";
 import NetworkFooter from "@components/NetworkFooter";
 import ImageLogo from "@assets/NutriDrive_02_02.jpeg";
+import CategorySelect from "@components/shop/CategorySelect";
 import "../style/Shop.css";
 
 function Shop() {
@@ -16,7 +17,10 @@ function Shop() {
         </div>
         <ButtonBasket />
       </header>
-      <SearchBar />
+      <section className="search-section">
+        <SearchBar />
+        <CategorySelect />
+      </section>
       <section className="itemCard-section">
         <ItemCard />
         <ItemCard />
