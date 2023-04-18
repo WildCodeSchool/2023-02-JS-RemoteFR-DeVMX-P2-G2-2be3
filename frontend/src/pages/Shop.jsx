@@ -9,7 +9,7 @@ import "../style/Shop.css";
 
 function Shop() {
   return (
-    <div>
+    <div className="shop">
       <Header />
       <section className="search-section">
         <SearchBar />

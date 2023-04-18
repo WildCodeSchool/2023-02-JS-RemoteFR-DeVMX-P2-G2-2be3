@@ -1,3 +1,7 @@
+.shop {
+  background-image: url(/src/assets/bg_body.png);
+}
+
 .items-section {
   display: flex;
   align-items: center;
