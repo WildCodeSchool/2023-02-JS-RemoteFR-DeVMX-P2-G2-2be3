@@ -1,14 +1,19 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable import/no-unresolved */
-import pizza from "@assets/pizza.png";
 import { useState } from "react";
+import { PropTypes } from "prop-types";
 import ItemCardQuantityButton from "./ItemCardQuantityButton";
 
 import "../../style/shopStyle/itemCard/ItemCard.css";
 
-function ItemCard() {
-  const [itemQuantity, setItemQuantity] = useState(0);
+function ItemCard({
+  image = "",
+  productName = "",
+  setItemQuantity,
+  itemQuantity,
+}) {
+  // const [itemQuantity, setItemQuantity] = useState(0);
   const [isFavorite, setIsFavorite] = useState(false);
 
   const handleClickAdd = () => {
@@ -27,9 +32,9 @@ function ItemCard() {
 
   return (
     <div className="itemCard-container">
-      <img className="img-details-container" src={pizza} alt="Pizza" />
+      <img className="img-details-container" src={image} alt={image} />
       <div className="description-details-container">
-        <h2>La pizza tomate</h2>
+        <h2>{productName}</h2>
         <p>Mozzarella, Pesto ...</p>
       </div>
       <span className="nutriScore-icon">A</span>
@@ -56,5 +61,12 @@ function ItemCard() {
     </div>
   );
 }
+
+ItemCard.propTypes = {
+  image: PropTypes.string.isRequired,
+  productName: PropTypes.string.isRequired,
+  setItemQuantity: PropTypes.func.isRequired,
+  itemQuantity: PropTypes.number.isRequired,
+};
 
 export default ItemCard;
