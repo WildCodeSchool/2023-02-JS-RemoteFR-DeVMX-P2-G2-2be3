@@ -1,6 +1,6 @@
 .receiptContainer {
   background-color: #f7f5ea;
-  width: 45%;
+  width: 50%;
   border: 1px solid black;
   margin: auto;
   display: flex;
@@ -16,18 +16,21 @@
 
 .receiptContainer h2 {
   font-weight: lighter;
-  font-size: 1rem;
+  font-size: 0.7rem;
 }
 
 .receipt-details {
+  margin-top: 10%;
+  margin-bottom: 50%;
   font-size: 0.5rem;
+  line-height: 0.1rem;
   display: flex;
   flex-direction: column;
 }
 
 .receiptContainer h1 {
   font-weight: lighter;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 0.3rem;
 }
 
