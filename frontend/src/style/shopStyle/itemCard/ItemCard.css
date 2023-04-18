@@ -3,17 +3,19 @@
   align-items: center;
   justify-content: space-between;
   width: 90%;
+  height: 6rem;
   background-color: whitesmoke;
-  border: 1px solid #333;
   border-radius: 5px;
   margin: 0.5rem;
   padding-right: 0.2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .img-details-container {
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
-  border-right: 1px solid #333;
+  height: 90%;
+  padding: 0.2rem;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  border-radius: 0.2rem;
 }
 
 .item-details-container {
@@ -51,16 +53,18 @@
 
 .button-quantity-container {
   display: flex;
+  margin-top: 0.2rem;
 }
 
 .nutriScore-icon {
-  margin-right: 1rem;
+  margin-right: 0.2rem;
 }
 
 .favorite-icon {
+  margin-bottom: 0.4rem;
   cursor: pointer;
 }
 
 .isFavorite {
   color: orange;
-} /*# sourceMappingURL=ItemCard.css.map */
+}/*# sourceMappingURL=ItemCard.css.map */
