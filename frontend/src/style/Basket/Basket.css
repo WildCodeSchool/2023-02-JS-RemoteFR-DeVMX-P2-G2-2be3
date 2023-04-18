@@ -1,0 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
+.basket {
+  background-image: url(/src/assets/bg_body.png);
+}
