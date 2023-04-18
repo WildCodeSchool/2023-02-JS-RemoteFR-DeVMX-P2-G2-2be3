@@ -1,0 +1,32 @@
+.btnBasket {
+  width: 55px;
+  height: 30px;
+  border-radius: 20px;
+  border: 1px solid gray;
+  transition: 0.2s ease-in-out;
+}
+
+.btnBasket:hover {
+  background: #9fd968;
+  box-shadow: 0px 0px 10px 4px rgb(255, 255, 255);
+}
+
+.imgBtnBasket {
+  width: 25px;
+}
+
+.txtBtnBasket {
+  display: none;
+}
+
+@media screen and (min-width: 795px) {
+  .btnBasket {
+    width: 150px;
+    height: 35px;
+  }
+
+  .txtBtnBasket {
+    display: initial;
+    font-size: 1.5rem;
+  }
+}

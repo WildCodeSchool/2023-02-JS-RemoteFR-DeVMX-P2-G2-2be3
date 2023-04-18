@@ -14,8 +14,6 @@
   display: flex;
   flex-direction: column;
   background-image: url(/src/assets/bg_body.png);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 main {

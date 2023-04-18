@@ -16,9 +16,7 @@ function Basket() {
       <ButtonReturn />
       <Receipt />
       <ButtonValide />
-      <footer>
-        <NetworkFooter />
-      </footer>
+      <NetworkFooter />
     </div>
   );
 }
