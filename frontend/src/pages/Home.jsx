@@ -19,9 +19,7 @@ function Home() {
           <ButtonConnect />
         </div>
       </main>
-      <footer>
-        <NetworkFooter />
-      </footer>
+      <NetworkFooter />
     </div>
   );
 }
