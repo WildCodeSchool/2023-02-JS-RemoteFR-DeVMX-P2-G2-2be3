@@ -1,4 +1,5 @@
 // import { PropTypes } from "prop-types;";
+import "../../style/CategorySelect.css";
 
 function CategorySelect() {
   return (

@@ -1,0 +1,8 @@
+.search-section > div > select {
+  width: 90vw;
+  height: 2rem;
+  background: #e5eadcf1;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding-left: 10px;
+}

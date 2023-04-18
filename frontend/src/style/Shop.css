@@ -1,5 +1,12 @@
 .shop {
+  height: 100vh;
   background-image: url(/src/assets/bg_body.png);
+}
+
+.search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .itemCard-section {

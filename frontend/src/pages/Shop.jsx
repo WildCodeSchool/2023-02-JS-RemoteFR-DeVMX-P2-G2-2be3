@@ -1,9 +1,10 @@
 /* eslint-disable import/no-unresolved */
-import ItemCard from "@components/itemCard/ItemCard";
-import SearchBar from "@components/SearchBar";
-import NetworkFooter from "@components/NetworkFooter";
-import CategorySelect from "@components/shop/CategorySelect";
 import Header from "@components/header/Header";
+import SearchBar from "@components/SearchBar";
+import BtnNutriScore from "@components/BtnNutriScore";
+import CategorySelect from "@components/shop/CategorySelect";
+import ItemCard from "@components/itemCard/ItemCard";
+import NetworkFooter from "@components/NetworkFooter";
 
 import "../style/Shop.css";
 
@@ -13,6 +14,7 @@ function Shop() {
       <Header />
       <section className="search-section">
         <SearchBar />
+        <BtnNutriScore />
         <CategorySelect />
       </section>
       <section className="itemCard-section">
