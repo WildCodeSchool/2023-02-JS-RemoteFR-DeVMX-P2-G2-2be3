@@ -1,0 +1,18 @@
+footer {
+  width: 100vw;
+  height: 50px;
+  position: relative;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.socialNet {
+  display: flex;
+}
+
+footer > div > a > img {
+  margin-left: 15px;
+  width: 30px;
+}
