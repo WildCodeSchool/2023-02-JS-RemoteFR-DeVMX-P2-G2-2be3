@@ -23,9 +23,7 @@ function Shop() {
         <ItemCard />
         <ItemCard />
       </section>
-      <footer>
-        <NetworkFooter />
-      </footer>
+      <NetworkFooter />
     </div>
   );
 }
