@@ -3,7 +3,6 @@ import { PropTypes } from "prop-types";
 import "../style/SearchBar.css";
 
 function SearchBar({ setSearchInput }) {
-
   const handleKeyDown = (event) => {
     if (event.key === "Enter") setSearchInput(event.target.value);
   };
