@@ -12,7 +12,8 @@
 }
 
 .img-details-container {
-  height: 90%;
+  max-width: 90%;
+  max-height: 90%;
   padding: 0.2rem;
   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   border-radius: 0.2rem;
@@ -33,6 +34,7 @@
   width: 100%;
   height: 100%;
   flex-grow: 1;
+  text-align: center;
 }
 
 .description-details-container h2 {
