@@ -1,36 +1,27 @@
-import Counter from "../components/Counter";
-import logo from "../assets/logo.svg";
+/* eslint-disable import/no-unresolved */
+import UserEmail from "@components/UserEmail";
+import UserPassword from "@components/UserPassword";
+import NetworkFooter from "@components/NetworkFooter";
+import ButtonConnect from "@components/ButtonConnect";
 
-export default function Home() {
+import LogoNutriDrive from "@assets/NutriDrive_logo_home.png/";
+
+import "../style/Home.css";
+
+function Home() {
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
-
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+    <div className="body">
+      <main>
+        <img className="imgLogoHome" src={LogoNutriDrive} alt="logo" />
+        <div className="formConnect">
+          <UserEmail />
+          <UserPassword />
+          <ButtonConnect />
+        </div>
+      </main>
+      <NetworkFooter />
+    </div>
   );
 }
+
+export default Home;
