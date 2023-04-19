@@ -42,6 +42,7 @@ function Shop() {
                 key={product.id}
                 image={product.image_front_thumb_url}
                 productName={product.product_name_fr}
+                ingredientsText={product.ingredients_text_fr}
                 setItemQuantity={setItemQuantity}
                 itemQuantity={itemQuantity}
               />

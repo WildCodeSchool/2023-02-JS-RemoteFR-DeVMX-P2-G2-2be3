@@ -10,6 +10,7 @@ import "../../style/shopStyle/itemCard/ItemCard.css";
 function ItemCard({
   image = "",
   productName = "",
+  ingredientsText = "",
   setItemQuantity,
   itemQuantity,
 }) {
@@ -35,7 +36,7 @@ function ItemCard({
       <img className="img-details-container" src={image} alt={image} />
       <div className="description-details-container">
         <h2>{productName}</h2>
-        <p>Mozzarella, Pesto ...</p>
+        <p>{ingredientsText.substr(0, 40)}...</p>
       </div>
       <span className="nutriScore-icon">A</span>
       <div className="icons-details-container">
@@ -65,6 +66,7 @@ function ItemCard({
 ItemCard.propTypes = {
   image: PropTypes.string.isRequired,
   productName: PropTypes.string.isRequired,
+  ingredientsText: PropTypes.string.isRequired,
   setItemQuantity: PropTypes.func.isRequired,
   itemQuantity: PropTypes.number.isRequired,
 };
