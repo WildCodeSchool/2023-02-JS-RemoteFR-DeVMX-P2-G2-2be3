@@ -5,7 +5,7 @@ import { useState } from "react";
 import { PropTypes } from "prop-types";
 import ItemCardQuantityButton from "./ItemCardQuantityButton";
 
-import "../../style/shopStyle/itemCard/ItemCard.css";
+import "../../../style/shopStyle/itemCard/itemCard.css";
 
 function ItemCard({
   image = "",
