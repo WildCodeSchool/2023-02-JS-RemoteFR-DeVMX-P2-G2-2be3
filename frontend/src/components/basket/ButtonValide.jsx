@@ -1,5 +1,9 @@
 function ButtonValide() {
-  return <button type="button">Valider ma commande</button>;
+  return (
+    <button type="button" className="buttonValide">
+      Valider ma commande
+    </button>
+  );
 }
 
 export default ButtonValide;
