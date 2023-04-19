@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-
 import { useState } from "react";
 import { PropTypes } from "prop-types";
 import ItemCardQuantityButton from "./ItemCardQuantityButton";
@@ -12,10 +11,9 @@ function ItemCard({
   productName = "",
   ingredientsText = "",
   nutriScoreGrade = "",
-  setItemQuantity,
-  itemQuantity,
 }) {
   const [isFavorite, setIsFavorite] = useState(false);
+  const [itemQuantity, setItemQuantity] = useState(0);
 
   const handleClickAdd = () => {
     setItemQuantity(itemQuantity + 1);
@@ -72,8 +70,6 @@ ItemCard.propTypes = {
   productName: PropTypes.string.isRequired,
   ingredientsText: PropTypes.string.isRequired,
   nutriScoreGrade: PropTypes.string.isRequired,
-  setItemQuantity: PropTypes.func.isRequired,
-  itemQuantity: PropTypes.number.isRequired,
 };
 
 export default ItemCard;

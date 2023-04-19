@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import { PropTypes } from "prop-types";
 import "../../../style/shopStyle/SearchBar.css";
 
