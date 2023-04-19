@@ -1,4 +1,4 @@
-import "../style/BtnNutriScore.css";
+import "../../../style/shopStyle/BtnNutriScore.css";
 
 function BtnNutriScore() {
   return (

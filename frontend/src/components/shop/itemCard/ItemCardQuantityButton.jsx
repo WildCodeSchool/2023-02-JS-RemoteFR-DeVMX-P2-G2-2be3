@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import "../../style/shopStyle/itemCard/ItemCardQuantityButton.css";
+import "../../../style/shopStyle/itemCard/ItemCardQuantityButton.css";
 
 function ItemCardQuantityButton({ icon, handleClick }) {
   return (
