@@ -11,7 +11,7 @@ function ItemCard({
   image = "",
   productName = "",
   ingredientsText = "",
-  nutriscoreGrade = "",
+  nutriScoreGrade = "",
   setItemQuantity,
   itemQuantity,
 }) {
@@ -40,7 +40,7 @@ function ItemCard({
         <p>{ingredientsText.substr(0, 40)}...</p>
       </div>
       <span
-        className={`btnNutriScoreLiButton btn${nutriscoreGrade.toUpperCase()}`}
+        className={`btnNutriScoreLiButton btn${nutriScoreGrade.toUpperCase()}`}
       >
         {nutriScoreGrade.toUpperCase()}
       </span>
