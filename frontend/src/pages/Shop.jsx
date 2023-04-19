@@ -43,6 +43,7 @@ function Shop() {
                 image={product.image_front_thumb_url}
                 productName={product.product_name_fr}
                 ingredientsText={product.ingredients_text_fr}
+                nutriscoreGrade={product.nutriscore_grade}
                 setItemQuantity={setItemQuantity}
                 itemQuantity={itemQuantity}
               />

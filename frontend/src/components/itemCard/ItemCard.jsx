@@ -11,6 +11,7 @@ function ItemCard({
   image = "",
   productName = "",
   ingredientsText = "",
+  nutriscoreGrade = "",
   setItemQuantity,
   itemQuantity,
 }) {
@@ -38,7 +39,11 @@ function ItemCard({
         <h2>{productName}</h2>
         <p>{ingredientsText.substr(0, 40)}...</p>
       </div>
-      <span className="nutriScore-icon">A</span>
+      <span
+        className={`btnNutriScoreLiButton btn${nutriscoreGrade.toUpperCase()}`}
+      >
+        {nutriscoreGrade.toUpperCase()}
+      </span>
       <div className="icons-details-container">
         <span
           onClick={handleClickIsFavorite}
@@ -67,6 +72,7 @@ ItemCard.propTypes = {
   image: PropTypes.string.isRequired,
   productName: PropTypes.string.isRequired,
   ingredientsText: PropTypes.string.isRequired,
+  nutriscoreGrade: PropTypes.string.isRequired,
   setItemQuantity: PropTypes.func.isRequired,
   itemQuantity: PropTypes.number.isRequired,
 };
