@@ -8,7 +8,7 @@
   position: absolute;
   top: 50%;
   left: 45%;
-  margin: -var(--diametre) / 2 0 0-var(--diametre) / 2;
+  margin: -var(--diametre)/2 0 0-var(--diametre)/2;
   animation: rotation 1s infinite linear;
   border: 6px solid rgba(0, 0, 0, 0.2);
   border-radius: 100%;
@@ -35,4 +35,4 @@
   to {
     transform: rotate(359deg);
   }
-} /*# sourceMappingURL=Loader.css.map */
+}/*# sourceMappingURL=Loader.css.map */
