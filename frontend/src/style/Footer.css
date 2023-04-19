@@ -1,7 +1,7 @@
 footer {
   width: 100vw;
   height: 50px;
-  padding:2%;
+  padding: 2%;
   position: relative;
   bottom: 0;
   display: flex;
@@ -17,10 +17,8 @@ footer {
 footer > div > a > img {
   margin-left: 15px;
   width: 30px;
-  
 }
 
-p{
-  font-weight:bold;
+p {
+  font-weight: bold;
 }
-
