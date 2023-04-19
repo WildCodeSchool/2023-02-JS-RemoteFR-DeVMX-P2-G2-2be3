@@ -72,7 +72,7 @@ ItemCard.propTypes = {
   image: PropTypes.string.isRequired,
   productName: PropTypes.string.isRequired,
   ingredientsText: PropTypes.string.isRequired,
-  nutriscoreGrade: PropTypes.string.isRequired,
+  nutriScoreGrade: PropTypes.string.isRequired,
   setItemQuantity: PropTypes.func.isRequired,
   itemQuantity: PropTypes.number.isRequired,
 };
