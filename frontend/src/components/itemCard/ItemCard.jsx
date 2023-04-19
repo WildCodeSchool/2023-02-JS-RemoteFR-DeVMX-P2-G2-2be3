@@ -14,7 +14,6 @@ function ItemCard({
   setItemQuantity,
   itemQuantity,
 }) {
-  // const [itemQuantity, setItemQuantity] = useState(0);
   const [isFavorite, setIsFavorite] = useState(false);
 
   const handleClickAdd = () => {
