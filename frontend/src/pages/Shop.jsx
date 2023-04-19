@@ -1,7 +1,6 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable import/no-unresolved */
 import { useState } from "react";
-// import axios from "axios";
 import useFetch from "@services/useFetch";
 import Header from "@components/header/Header";
 import SearchBar from "@components/SearchBar";
