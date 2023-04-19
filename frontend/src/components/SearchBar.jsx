@@ -3,13 +3,6 @@ import { PropTypes } from "prop-types";
 import "../style/SearchBar.css";
 
 function SearchBar({ setSearchInput }) {
-  // const [searchInput, setSearchInput] = useState("");
-
-  // const [updatedInput, setUpdatedInput] = useState("");
-
-  // const handleClickSearchInput = (event) => {
-  //   setSearchInput(event.target.value);
-  // };
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") setSearchInput(event.target.value);
@@ -21,7 +14,6 @@ function SearchBar({ setSearchInput }) {
         name=""
         id=""
         placeholder="Insérez le nom de votre article"
-        // onClick={handleClickSearchInput}
         onKeyDown={handleKeyDown}
       />
     </div>
