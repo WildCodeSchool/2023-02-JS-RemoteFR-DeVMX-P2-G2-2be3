@@ -3,10 +3,10 @@
 import { useState } from "react";
 import useFetch from "@services/useFetch";
 import Header from "@components/header/Header";
-import SearchBar from "@components/SearchBar";
-import BtnNutriScore from "@components/BtnNutriScore";
-import CategorySelect from "@components/shop/CategorySelect";
-import ItemCard from "@components/itemCard/ItemCard";
+import SearchBar from "@components/shop/searchContainer/SearchBar";
+import BtnNutriScore from "@components/shop/searchContainer/BtnNutriScore";
+import CategorySelect from "@components/shop/searchContainer/CategorySelect";
+import ItemCard from "@components/shop/itemCard/ItemCard";
 import NetworkFooter from "@components/NetworkFooter";
 import Loader from "@components/shop/Loader";
 
@@ -41,7 +41,7 @@ function Shop() {
                 image={product.image_front_thumb_url}
                 productName={product.product_name_fr}
                 ingredientsText={product.ingredients_text_fr}
-                nutriscoreGrade={product.nutriscore_grade}
+                nutriScoreGrade={product.nutriscore_grade}
                 setItemQuantity={setItemQuantity}
                 itemQuantity={itemQuantity}
               />
