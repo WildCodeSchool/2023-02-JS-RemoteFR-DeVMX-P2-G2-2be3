@@ -16,13 +16,13 @@
 
 .receiptContainer h2 {
   font-weight: lighter;
-  font-size: 0.7rem;
+  font-size: 2.5vw;
 }
 
 .receipt-details {
   margin-top: 10%;
   margin-bottom: 50%;
-  font-size: 0.5rem;
+  font-size: 2vw;
   line-height: 0.1rem;
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@
 
 .receiptContainer h1 {
   font-weight: lighter;
-  font-size: 0.9rem;
+  font-size: 2.7vw;
   margin: 0.3rem;
 }
 
