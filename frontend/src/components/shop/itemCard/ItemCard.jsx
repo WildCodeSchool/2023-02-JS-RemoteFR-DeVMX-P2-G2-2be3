@@ -11,10 +11,9 @@ function ItemCard({
   productName = "",
   ingredientsText = "",
   nutriScoreGrade = "",
-  setItemQuantity,
-  itemQuantity,
 }) {
   const [isFavorite, setIsFavorite] = useState(false);
+  const [itemQuantity, setItemQuantity] = useState(0);
 
   const handleClickAdd = () => {
     setItemQuantity(itemQuantity + 1);
@@ -71,8 +70,6 @@ ItemCard.propTypes = {
   productName: PropTypes.string.isRequired,
   ingredientsText: PropTypes.string.isRequired,
   nutriScoreGrade: PropTypes.string.isRequired,
-  setItemQuantity: PropTypes.func.isRequired,
-  itemQuantity: PropTypes.number.isRequired,
 };
 
 export default ItemCard;

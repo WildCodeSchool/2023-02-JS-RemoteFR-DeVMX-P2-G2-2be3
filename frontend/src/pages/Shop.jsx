@@ -14,7 +14,6 @@ import "../style/Shop.css";
 
 function Shop() {
   const [searchInput, setSearchInput] = useState("");
-  const [itemQuantity, setItemQuantity] = useState(0);
 
   const urlApiSearchBar = `https://fr.openfoodfacts.org/cgi/search.pl?action=process&json=true&search_terms=${searchInput}&sort_by=unique_scans_n&page_size=24`;
   const { data, loading, error } = useFetch(urlApiSearchBar);
@@ -42,8 +41,6 @@ function Shop() {
                 productName={product.product_name_fr}
                 ingredientsText={product.ingredients_text_fr}
                 nutriScoreGrade={product.nutriscore_grade}
-                setItemQuantity={setItemQuantity}
-                itemQuantity={itemQuantity}
               />
             );
           })}
