@@ -1,12 +1,6 @@
 .shop {
-  height: 100vh;
   background-image: url(/src/assets/bg_body.png);
-}
-
-.search-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
 }
 
 .itemCard-section {
@@ -16,4 +10,4 @@
   flex-direction: column;
   font-family: "Roboto", sans-serif;
   margin-bottom: 20px;
-} /*# sourceMappingURL=Shop.css.map */
+}/*# sourceMappingURL=Shop.css.map */

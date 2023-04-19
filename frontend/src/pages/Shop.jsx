@@ -8,6 +8,7 @@ import BtnNutriScore from "@components/BtnNutriScore";
 import CategorySelect from "@components/shop/CategorySelect";
 import ItemCard from "@components/itemCard/ItemCard";
 import NetworkFooter from "@components/NetworkFooter";
+import Loader from "@components/shop/Loader";
 
 import "../style/Shop.css";
 
@@ -18,10 +19,7 @@ function Shop() {
   const urlApiSearchBar = `https://fr.openfoodfacts.org/cgi/search.pl?action=process&json=true&search_terms=${searchInput}&sort_by=unique_scans_n&page_size=24`;
   const { data, loading, error } = useFetch(urlApiSearchBar);
 
-  if (loading)
-    return (
-      <h2 style={{ textAlign: "center", fontSize: "50px" }}>Loading...</h2>
-    );
+  // if (loading) return <Loader />;
   if (error) console.log(error);
   if (data) console.log(data);
 
@@ -34,6 +32,7 @@ function Shop() {
         <CategorySelect />
       </section>
       <section className="itemCard-section">
+        {loading && <Loader />}
         {data &&
           data.map((product) => {
             return (
@@ -48,7 +47,9 @@ function Shop() {
             );
           })}
       </section>
-      <NetworkFooter />
+      <footer>
+        <NetworkFooter />
+      </footer>
     </div>
   );
 }
