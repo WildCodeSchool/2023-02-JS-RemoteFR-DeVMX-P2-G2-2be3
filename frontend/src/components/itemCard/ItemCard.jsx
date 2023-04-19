@@ -42,7 +42,7 @@ function ItemCard({
       <span
         className={`btnNutriScoreLiButton btn${nutriscoreGrade.toUpperCase()}`}
       >
-        {nutriscoreGrade.toUpperCase()}
+        {nutriScoreGrade.toUpperCase()}
       </span>
       <div className="icons-details-container">
         <span
