@@ -9,6 +9,7 @@ import CategorySelect from "@components/shop/searchContainer/CategorySelect";
 import ItemCard from "@components/shop/itemCard/ItemCard";
 import NetworkFooter from "@components/NetworkFooter";
 import Loader from "@components/shop/Loader";
+import ItemCardDetailsModal from "@components/shop/itemCard/ItemCardDetailsModal";
 
 import "../style/Shop.css";
 
@@ -16,12 +17,13 @@ function Shop() {
   const [searchInput, setSearchInput] = useState("");
   const [itemQuantity, setItemQuantity] = useState(0);
   const [selectedNutriScore, setSelectedNutriScore] = useState(null);
+  const [openModal, setOpenModal] = useState(false);
+  const [dataModal, setDataModal] = useState(null);
 
   const urlApiSearchBar = `https://fr.openfoodfacts.org/cgi/search.pl?action=process&json=true&search_terms=${searchInput}&sort_by=unique_scans_n&page_size=24`;
   const { data, loading, error } = useFetch(urlApiSearchBar);
 
   if (error) console.log(error);
-  if (data) console.log(data);
 
   return (
     <div className="shop">
@@ -50,9 +52,23 @@ function Shop() {
                   nutriScoreGrade={product.nutriscore_grade}
                   setItemQuantity={setItemQuantity}
                   itemQuantity={itemQuantity}
+                  setOpenModal={setOpenModal}
+                  openModal={openModal}
+                  product={product}
+                  setDataModal={setDataModal}
                 />
               );
             })}
+        {openModal && (
+          <ItemCardDetailsModal
+            image={dataModal.image_front_thumb_url}
+            productName={dataModal.product_name_fr}
+            productDetails={dataModal.ingredients_text_fr}
+            nutriScore={dataModal.nutriscore_grade}
+            setOpenModal={setOpenModal}
+            openModal={openModal}
+          />
+        )}
       </section>
       <footer>
         <NetworkFooter />

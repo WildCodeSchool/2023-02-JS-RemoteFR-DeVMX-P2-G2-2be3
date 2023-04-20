@@ -11,6 +11,10 @@ function ItemCard({
   productName = "",
   ingredientsText = "",
   nutriScoreGrade = "",
+  setOpenModal,
+  openModal,
+  product,
+  setDataModal,
 }) {
   const [isFavorite, setIsFavorite] = useState(false);
   const [itemQuantity, setItemQuantity] = useState(0);
@@ -29,10 +33,18 @@ function ItemCard({
     setIsFavorite(!isFavorite);
   };
 
+  const handleSetDataModalAndOpen = (itemProduct) => {
+    setOpenModal(!openModal);
+    setDataModal(itemProduct);
+  };
+
   return (
     <div className="itemCard-container">
       <img className="img-details-container" src={image} alt={image} />
-      <div className="description-details-container">
+      <div
+        onClick={() => handleSetDataModalAndOpen(product)}
+        className="description-details-container"
+      >
         <h2>{productName}</h2>
         <p>{ingredientsText.substr(0, 40)}...</p>
       </div>
@@ -70,6 +82,15 @@ ItemCard.propTypes = {
   productName: PropTypes.string.isRequired,
   ingredientsText: PropTypes.string.isRequired,
   nutriScoreGrade: PropTypes.string.isRequired,
+  setOpenModal: PropTypes.func.isRequired,
+  openModal: PropTypes.bool.isRequired,
+  product: PropTypes.shape({
+    image: PropTypes.string,
+    productName: PropTypes.string,
+    ingredientsText: PropTypes.string,
+    nutriScoreGrade: PropTypes.string,
+  }).isRequired,
+  setDataModal: PropTypes.func.isRequired,
 };
 
 export default ItemCard;
