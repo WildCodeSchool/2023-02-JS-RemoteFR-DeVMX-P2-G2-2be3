@@ -1,21 +1,27 @@
-/* Modal Header */
+.btn-valid {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .modal-header {
     padding: 2px 16px;
     background-color: #5cb85c;
     color: white;
   }
   
-  /* Modal Body */
-  .modal-body {padding: 2px 16px;}
+  .modal-body {
+    font-size: 35px;
+    padding: 10px 16px;
+    text-align: center;
+}
   
-  /* Modal Footer */
+  
   .modal-footer {
     padding: 2px 16px;
     background-color: #5cb85c;
     color: white;
   }
   
-  /* Modal Content */
   .modal-content {
     position: relative;
     background-color: #fefefe;
@@ -27,8 +33,28 @@
     animation-name: animatetop;
     animation-duration: 0.4s
   }
+
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
   
-  /* Add Animation */
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
   @keyframes animatetop {
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}

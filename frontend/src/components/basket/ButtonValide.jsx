@@ -7,7 +7,7 @@ function ButtonValide() {
 
   const openModal = () => setIsOpen(!isOpen);
   return (
-    <div>
+    <div className="btn-valid">
       <button type="button" className="buttonValide" onClick={openModal}>
         Valider ma commande
       </button>
