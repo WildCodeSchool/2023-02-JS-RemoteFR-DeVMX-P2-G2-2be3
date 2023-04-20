@@ -29,32 +29,27 @@ header .idBasket {
   margin: auto 2% auto 0%;
 }
 
-header:nth-child(1)
-{
-  transform:rotate(0deg);
+header:nth-child(1) {
+  transform: rotate(0deg);
 }
 
-header:nth-child(2)
-{
-  transform:rotate(90deg);
+header:nth-child(2) {
+  transform: rotate(90deg);
 }
 
-header:nth-child(3)
-{
-  transform:rotate(180deg);
+header:nth-child(3) {
+  transform: rotate(180deg);
 }
 
-header:nth-child(4)
-{
-  transform:rotate(270deg);
+header:nth-child(4) {
+  transform: rotate(270deg);
 }
 
-header:before
-{
-  content: '';
+header:before {
+  content: "";
   position: absolute;
   bottom: -1px;
-  width:100%;
+  width: 100%;
   height: 3px;
   background: rgb(6, 250, 6);
   animation: animate 4s linear infinite;
@@ -62,27 +57,20 @@ header:before
 
 @keyframes animate {
   0% {
-  transform:scaleX(0);
-  transform-origin: left;
+    transform: scaleX(0);
+    transform-origin: left;
   }
-  50%
-  {
-    transform:scaleX(1);
-  transform-origin: left;
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
   }
-  50.1%
-  {
-    transform:scaleX(1);
-  transform-origin: right;
-    
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: right;
   }
-  
-  100%
-  {
-    transform:scaleX(0);
-  transform-origin: right;
-    
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
   }
-  
-  
-} 
+}
