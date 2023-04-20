@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import PropTypes from "prop-types";
 import "../../../style/shopStyle/itemCard/ItemCardDetailsModal.css";
 
