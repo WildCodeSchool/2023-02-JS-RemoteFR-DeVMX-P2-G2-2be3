@@ -104,7 +104,7 @@ ItemCard.propTypes = {
 ItemCard.defaultProps = {
   productName: "There are not details",
   ingredientsText: "There are not details",
-  nutriScoreGrade: "There are not details",
+  nutriScoreGrade: "0",
 };
 
 export default ItemCard;
