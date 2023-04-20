@@ -25,7 +25,7 @@ function ItemCardDetailsModal({
           <figure className="figureDetailsModal">
             <img className="imgborder s1" src={image} alt={genericName} />
             <figcaption className="figcaption-modal-image">
-              {productName}
+              {genericName}
             </figcaption>
           </figure>
           <span className={`btnNutriScoreIcon btn${nutriScore.toUpperCase()}`}>
