@@ -50,8 +50,8 @@ function ItemCard({
         }}
         className="description-details-container"
       >
-        <h2>{productName}</h2>
-        <p>{ingredientsText.substr(0, 40)}...</p>
+        <h2>{productName}...</h2>
+        <p>{ingredientsText.slice(0, 40)}...</p>
       </div>
       <span
         className={`btnNutriScoreLiButton btn${nutriScoreGrade.toUpperCase()}`}

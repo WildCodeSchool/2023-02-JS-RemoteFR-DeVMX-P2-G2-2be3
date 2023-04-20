@@ -50,7 +50,7 @@ function Shop() {
                 <ItemCard
                   key={product.id}
                   image={product.image_front_thumb_url}
-                  productName={product.product_name_fr}
+                  productName={product.product_name_fr.slice(0, 19)}
                   ingredientsText={cleanIngredientsText}
                   nutriScoreGrade={product.nutriscore_grade}
                   setItemQuantity={setItemQuantity}
