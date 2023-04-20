@@ -6,8 +6,8 @@ import "../../../style/shopStyle/itemCard/ItemCard.css";
 
 function ItemCard({
   image = "",
-  productName = "No details",
-  ingredientsText = "No details",
+  productName = "",
+  ingredientsText = "",
   nutriScoreGrade = "",
   setOpenModal,
   openModal,
