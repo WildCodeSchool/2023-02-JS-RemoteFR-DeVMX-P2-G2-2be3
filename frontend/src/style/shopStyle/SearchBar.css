@@ -1,3 +1,9 @@
+.search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .search-section > div > input {
   width: 90vw;
   height: 2rem;
@@ -5,4 +11,20 @@
   border: 1px solid gray;
   border-radius: 10px;
   padding-left: 10px;
+}
+
+@media screen and (min-width: 795px) {
+  .search-section {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .search-section > div > input {
+    width: 30vw;
+  }
+
+  .search-section > div > ul {
+    width: 30vw;
+    justify-content: space-around;
+  }
 }

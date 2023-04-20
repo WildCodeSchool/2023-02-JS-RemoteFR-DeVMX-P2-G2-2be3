@@ -16,6 +16,14 @@
   transition: transform 0.2s ease-in-out;
 }
 
+@media screen and (min-width: 795px) {
+  .btnNutriScore > li > button {
+    margin: 0 2vw;
+    padding: 0;
+    width: 25px;
+  }
+}
+
 .btnNutriScoreLiButton {
   margin: 0 5vw;
   padding: 0.3rem;
