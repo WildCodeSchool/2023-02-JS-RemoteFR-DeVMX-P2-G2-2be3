@@ -1,4 +1,3 @@
-// import { PropTypes } from "prop-types;";
 import "../../../style/shopStyle/CategorySelect.css";
 
 function CategorySelect() {
