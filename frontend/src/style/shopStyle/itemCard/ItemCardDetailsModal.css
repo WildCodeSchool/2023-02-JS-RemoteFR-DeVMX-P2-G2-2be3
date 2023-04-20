@@ -5,28 +5,84 @@
 }
 
 .itemCardDetailsModal-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   position: fixed;
-  top: 30%;
-  left: 3%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.modal-details{
+  max-width: 80%;
+  height: 80vh;
+  padding: 2rem;
   color: black;
   background-color: whitesmoke;
-  padding: 2rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
   rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
   rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   border-radius: 1rem;
+  overflow-y: auto;
+}
+
+.button-modal-details {
+  padding: 0.3rem;
+  border: none;
+  background-color: whitesmoke;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button-modal-details:hover {
+  transform: scale(1.2);
 }
 
 .itemCardDetailsModal-title {
   text-align: center;
+  font-size: 1.2rem;
 }
 
 .imageAndNutriScore-container {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  flex-direction: row;
-  margin-top: 1rem;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.figureDetailsModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.figureDetailsModal img {
+  margin-bottom: 0.5rem;
+}
+
+.imgborder {
+  display: inline-block;
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 5px;
+  background: #f2f2f2;
+}
+
+.s1 {
+  -webkit-box-shadow: 0 28px 16px -26px rgba(0, 0, 0);
+  -moz-box-shadow: 0 28px 16px -26px rgba(0, 0, 0);
+  box-shadow: 0 28px 16px -26px rgba(0, 0, 0);
+}
+
+.figcaption-modal-image {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.8rem;
 }
 
 .btnNutriScoreIcon {
@@ -72,15 +128,26 @@
   font-weight: bold;
 }
 
-.button-modal-details {
-  padding: 0.3rem;
-  border: none;
-  background-color: whitesmoke;
-
-  margin-left: 95%;
-  transition: transform 0.2s ease-in-out;
+.nutri-score-label {
+  font-size: 0.7rem;
 }
 
-.button-modal-details:hover {
-  transform: scale(1.2);
+.modal-ingredients-details {
+  margin-top: 1rem;
+  text-align: center;
+  line-height: 24px;
+  overflow-y: initial
+}
+
+@media screen and (min-width: 414px)  {
+  .modal-details{
+    max-width: 75%;
+    height: 80vh;
+  }
+}
+@media screen and (min-width: 768px)  {
+  .modal-details{
+    max-width: 60%;
+    height: 80vh;
+  }
 }

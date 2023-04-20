@@ -12,24 +12,29 @@ function ItemCardDetailsModal({
 }) {
   return (
     <div className="itemCardDetailsModal-container">
-      <button
-        className="button-modal-details"
-        type="button"
-        onClick={() => setOpenModal(!openModal)}
-      >
-        &#10006;
-      </button>
-      <h2 className="itemCardDetailsModal-title">{productName}</h2>
-      <div className="imageAndNutriScore-container">
-        <figure>
-          <img src={image} alt={genericName} />
-          <figcaption>{genericName}</figcaption>
-        </figure>
-        <span className={`btnNutriScoreIcon btn${nutriScore.toUpperCase()}`}>
-          {nutriScore.toUpperCase()}
-        </span>
+      <div className="modal-details">
+        <button
+          className="button-modal-details"
+          type="button"
+          onClick={() => setOpenModal(!openModal)}
+        >
+          &#10006;
+        </button>
+        <h2 className="itemCardDetailsModal-title">{productName}</h2>
+        <div className="imageAndNutriScore-container">
+          <figure className="figureDetailsModal">
+            <img className="imgborder s1" src={image} alt={genericName} />
+            <figcaption className="figcaption-modal-image">
+              {productName}
+            </figcaption>
+          </figure>
+          <span className={`btnNutriScoreIcon btn${nutriScore.toUpperCase()}`}>
+            {nutriScore.toUpperCase()}
+          </span>
+          <p className="nutri-score-label">Nutri Score</p>
+        </div>
+        <p className="modal-ingredients-details">{productDetails}</p>
       </div>
-      <p>{productDetails}</p>
     </div>
   );
 }
@@ -48,7 +53,7 @@ ItemCardDetailsModal.defaultProps = {
   productName: "There are not details",
   productDetails: "There are not details",
   genericName: "There are not details",
-  nutriScore: "There are not details",
+  nutriScore: "0",
 };
 
 export default ItemCardDetailsModal;

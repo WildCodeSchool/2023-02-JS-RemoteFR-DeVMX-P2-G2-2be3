@@ -64,7 +64,7 @@ function Shop() {
             })}
         {openModal && (
           <ItemCardDetailsModal
-            image={dataModal.image_front_thumb_url}
+            image={dataModal.image_front_small_url}
             productName={dataModal.product_name_fr}
             genericName={dataModal.generic_name_fr}
             productDetails={
