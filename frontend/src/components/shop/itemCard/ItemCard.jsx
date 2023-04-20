@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useState } from "react";
 import { PropTypes } from "prop-types";
 import ItemCardQuantityButton from "./ItemCardQuantityButton";
@@ -33,16 +31,23 @@ function ItemCard({
     setIsFavorite(!isFavorite);
   };
 
-  const handleSetDataModalAndOpen = (itemProduct) => {
-    setOpenModal(!openModal);
-    setDataModal(itemProduct);
+  const handleSetDataModalAndOpen = (itemProduct, event) => {
+    if (event.type === "click") {
+      setOpenModal(!openModal);
+      setDataModal(itemProduct);
+    }
   };
 
   return (
     <div className="itemCard-container">
       <img className="img-details-container" src={image} alt={image} />
       <div
-        onClick={() => handleSetDataModalAndOpen(product)}
+        role="button"
+        tabIndex="0"
+        onKeyDown={() => {}}
+        onClick={(event) => {
+          handleSetDataModalAndOpen(product, event);
+        }}
         className="description-details-container"
       >
         <h2>{productName}</h2>
@@ -55,7 +60,10 @@ function ItemCard({
       </span>
       <div className="icons-details-container">
         <span
-          onClick={handleClickIsFavorite}
+          role="button"
+          tabIndex="0"
+          onKeyDown={() => {}}
+          onClick={(event) => handleClickIsFavorite(event)}
           className={
             isFavorite
               ? "material-symbols-outlined favorite-icon isFavorite"
@@ -79,9 +87,9 @@ function ItemCard({
 
 ItemCard.propTypes = {
   image: PropTypes.string.isRequired,
-  productName: PropTypes.string.isRequired,
-  ingredientsText: PropTypes.string.isRequired,
-  nutriScoreGrade: PropTypes.string.isRequired,
+  productName: PropTypes.string,
+  ingredientsText: PropTypes.string,
+  nutriScoreGrade: PropTypes.string,
   setOpenModal: PropTypes.func.isRequired,
   openModal: PropTypes.bool.isRequired,
   product: PropTypes.shape({
@@ -91,6 +99,12 @@ ItemCard.propTypes = {
     nutriScoreGrade: PropTypes.string,
   }).isRequired,
   setDataModal: PropTypes.func.isRequired,
+};
+
+ItemCard.defaultProps = {
+  productName: "There are not details",
+  ingredientsText: "There are not details",
+  nutriScoreGrade: "There are not details",
 };
 
 export default ItemCard;

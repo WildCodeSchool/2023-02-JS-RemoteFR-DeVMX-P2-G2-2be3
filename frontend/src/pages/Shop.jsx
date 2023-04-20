@@ -1,15 +1,13 @@
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable import/no-unresolved */
 import { useState } from "react";
-import useFetch from "@services/useFetch";
-import Header from "@components/header/Header";
-import SearchBar from "@components/shop/searchContainer/SearchBar";
-import BtnNutriScore from "@components/shop/searchContainer/BtnNutriScore";
-import CategorySelect from "@components/shop/searchContainer/CategorySelect";
-import ItemCard from "@components/shop/itemCard/ItemCard";
-import NetworkFooter from "@components/NetworkFooter";
-import Loader from "@components/shop/Loader";
-import ItemCardDetailsModal from "@components/shop/itemCard/ItemCardDetailsModal";
+import SearchBar from "../components/shop/searchContainer/SearchBar";
+import BtnNutriScore from "../components/shop/searchContainer/BtnNutriScore";
+import CategorySelect from "../components/shop/searchContainer/CategorySelect";
+import ItemCard from "../components/shop/itemCard/ItemCard";
+import NetworkFooter from "../components/NetworkFooter";
+import Loader from "../components/shop/Loader";
+import ItemCardDetailsModal from "../components/shop/itemCard/ItemCardDetailsModal";
+import Header from "../components/header/Header";
+import useFetch from "../services/useFetch";
 
 import "../style/Shop.css";
 
@@ -21,9 +19,7 @@ function Shop() {
   const [dataModal, setDataModal] = useState(null);
 
   const urlApiSearchBar = `https://fr.openfoodfacts.org/cgi/search.pl?action=process&json=true&search_terms=${searchInput}&sort_by=unique_scans_n&page_size=24`;
-  const { data, loading, error } = useFetch(urlApiSearchBar);
-
-  if (error) console.log(error);
+  const { data, loading } = useFetch(urlApiSearchBar);
 
   return (
     <div className="shop">
