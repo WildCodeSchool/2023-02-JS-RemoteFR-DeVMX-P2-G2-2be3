@@ -1,10 +1,11 @@
 footer {
   width: 100vw;
   height: 50px;
+  padding: 2%;
   position: relative;
   bottom: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border-top: 1px solid rgb(1, 63, 1);
 }

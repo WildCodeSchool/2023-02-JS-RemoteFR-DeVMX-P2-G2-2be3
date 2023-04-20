@@ -23,6 +23,7 @@ header .idBasket {
 .idBasket h3 {
   margin: auto;
   color: white;
+  font-size: 2.7vw;
 }
 
 .idBasket button {

@@ -21,13 +21,6 @@
 
 @media screen and (min-width: 795px) {
   .btnBasket {
-    width: 150px;
-    height: 35px;
-  }
-
-  .txtBtnBasket {
-    display: initial;
-    font-size: 1.5rem;
-    color: black;
+    width: 7vw;
   }
 }
