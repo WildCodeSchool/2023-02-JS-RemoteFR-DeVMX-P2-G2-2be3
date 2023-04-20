@@ -1,10 +1,9 @@
-/* eslint-disable import/no-unresolved */
-import UserEmail from "@components/home/UserEmail";
-import UserPassword from "@components/home/UserPassword";
-import NetworkFooter from "@components/NetworkFooter";
-import ButtonConnect from "@components/home/ButtonConnect";
+import UserEmail from "../components/home/UserEmail";
+import UserPassword from "../components/home/UserPassword";
+import NetworkFooter from "../components/NetworkFooter";
+import ButtonConnect from "../components/home/ButtonConnect";
 
-import LogoNutriDrive from "@assets/NutriDrive_logo_home.png/";
+import LogoNutriDrive from "../assets/NutriDrive_logo_home.png";
 
 import "../style/Home.css";
 
