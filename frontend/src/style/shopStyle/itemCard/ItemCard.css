@@ -7,19 +7,13 @@
   background-color: whitesmoke;
   border-radius: 5px;
   margin: 0.5rem;
-  padding-right: 0.2rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .img-details-container {
   max-width: 90%;
   max-height: 90%;
   padding: 0.2rem;
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
-    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-  border-radius: 0.2rem;
+  margin-left: 0.3rem;
 }
 
 .item-details-container {
@@ -30,6 +24,7 @@
 }
 
 .description-details-container {
+  margin: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -50,6 +45,7 @@
 }
 
 .icons-details-container {
+  margin-right: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -72,4 +68,24 @@
 
 .isFavorite {
   color: red;
+}
+
+@media screen and (min-width: 550px) {
+  .description-details-container h2 {
+    font-size: 1rem;
+  }
+
+  .description-details-container p {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .description-details-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .description-details-container p {
+    font-size: 0.8rem;
+  }
 }
