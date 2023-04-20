@@ -44,7 +44,10 @@ function Shop() {
                   key={product.id}
                   image={product.image_front_thumb_url}
                   productName={product.product_name_fr}
-                  ingredientsText={product.ingredients_text_fr}
+                  ingredientsText={product.ingredients_text_fr.replaceAll(
+                    "_",
+                    " "
+                  )}
                   nutriScoreGrade={product.nutriscore_grade}
                   setItemQuantity={setItemQuantity}
                   itemQuantity={itemQuantity}
@@ -59,7 +62,7 @@ function Shop() {
           <ItemCardDetailsModal
             image={dataModal.image_front_thumb_url}
             productName={dataModal.product_name_fr}
-            productDetails={dataModal.ingredients_text_fr}
+            productDetails={dataModal.ingredients_text_fr.replaceAll("_", " ")}
             nutriScore={dataModal.nutriscore_grade}
             setOpenModal={setOpenModal}
             openModal={openModal}
