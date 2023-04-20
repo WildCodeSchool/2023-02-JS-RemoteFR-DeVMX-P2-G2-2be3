@@ -7,6 +7,7 @@ import ButtonValide from "../components/basket/ButtonValide";
 import "../style/Basket/Basket.css";
 import "../style/Basket/BasketReceipt.css";
 import "../style/Header.css";
+import "../style/Basket/ModalButtonValide.css";
 
 function Basket() {
   return (
