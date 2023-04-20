@@ -5,7 +5,7 @@
 }
 
 .itemCardDetailsModal-container {
-  position: absolute;
+  position: fixed;
   top: 30%;
   left: 3%;
   color: black;
@@ -74,8 +74,8 @@
 
 .button-modal-details {
   padding: 0.3rem;
-  border-radius: 50%;
-  background: rgb(147, 206, 3);
+  border: none;
+  background-color: whitesmoke;
 
   margin-left: 95%;
   transition: transform 0.2s ease-in-out;

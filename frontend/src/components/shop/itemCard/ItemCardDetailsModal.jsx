@@ -16,7 +16,7 @@ function ItemCardDetailsModal({
         type="button"
         onClick={() => setOpenModal(!openModal)}
       >
-        X
+        &#10006;
       </button>
       <h2 className="itemCardDetailsModal-title">ItemCardDetailsModal</h2>
       <div className="imageAndNutriScore-container">
