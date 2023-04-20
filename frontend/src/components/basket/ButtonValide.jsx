@@ -24,7 +24,7 @@ function ButtonValide() {
               <p>Votre commande a bien été validée</p>
             </div>
             <div className="modal-footer">
-              <h3>Bravo !</h3>
+              <h3>Bonne journée et à bientôt</h3>
             </div>
           </div>
         </div>

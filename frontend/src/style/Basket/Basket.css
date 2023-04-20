@@ -17,6 +17,15 @@
   font-weight: bold;
   font-size: 3vw;
   color: white;
+  border-radius: 5vw;
+  border: 0;
+  box-shadow: 0px 5px 10px 1px rgba(70, 70, 70, 0.5);
+  transition: ease-in-out 0.2s;
+}
+
+.buttonReturn:hover,
+.buttonValide:hover {
+  background-color: #19753d;
 }
 
 .basket a {
