@@ -40,7 +40,9 @@ function ItemCard({
 
   return (
     <div className="itemCard-container">
-      <img className="img-details-container" src={image} alt={image} />
+      <div className="imgContainer">
+        <img className="img-details-container" src={image} alt={image} />
+      </div>
       <div
         role="button"
         tabIndex="0"
