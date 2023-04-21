@@ -36,7 +36,7 @@ function Shop() {
             .filter(
               (product) =>
                 selectedNutriScore === null ||
-                product.nutriscore_grade.toLowerCase() === selectedNutriScore
+                product.nutriscore_grade === selectedNutriScore
             )
             .map((product) => {
               let cleanIngredientsText = "";
