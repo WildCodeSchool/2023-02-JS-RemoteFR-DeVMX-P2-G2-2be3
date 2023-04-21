@@ -6,3 +6,9 @@
   border-radius: 10px;
   padding-left: 10px;
 }
+
+@media screen and (min-width: 795px) {
+  .search-section > div > select {
+    width: 30vw;
+  }
+}
