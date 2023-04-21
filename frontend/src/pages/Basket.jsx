@@ -12,11 +12,17 @@ import "../style/Basket/ModalButtonValide.css";
 function Basket() {
   return (
     <div className="basket">
-      <Header />
-      <ButtonReturn />
-      <Receipt />
+      <header>
+        <Header />
+      </header>
+      <main>
+        <ButtonReturn />
+        <Receipt />
+      </main>
       <ButtonValide />
-      <NetworkFooter />
+      <footer>
+        <NetworkFooter />
+      </footer>
     </div>
   );
 }

@@ -23,14 +23,17 @@ function Shop() {
 
   return (
     <div className="shop">
-      <Header />
-      <section className="search-section">
-        <SearchBar setSearchInput={setSearchInput} />
-        <BtnNutriScore setSelectedNutriScore={setSelectedNutriScore} />
-        <CategorySelect />
-      </section>
+      <div>
+        <Header />
+        <section className="search-section">
+          <SearchBar setSearchInput={setSearchInput} />
+          <BtnNutriScore setSelectedNutriScore={setSelectedNutriScore} />
+          <CategorySelect />
+        </section>
+      </div>
       <section className="itemCard-section">
         {loading && <Loader />}
+        {loading && <div className="fill-section" />}
         {data &&
           data
             .filter(
