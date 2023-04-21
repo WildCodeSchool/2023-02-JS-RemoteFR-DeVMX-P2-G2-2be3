@@ -1,6 +1,9 @@
 .shop {
   background-image: url(/src/assets/bg_body.png);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .itemCard-section {
@@ -10,4 +13,8 @@
   flex-direction: column;
   font-family: "Roboto", sans-serif;
   margin-bottom: 20px;
+}
+
+.fill-section{
+  flex-grow: 1;
 }
