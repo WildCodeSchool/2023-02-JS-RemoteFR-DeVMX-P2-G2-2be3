@@ -80,9 +80,7 @@ function Shop() {
           />
         )}
       </section>
-      <footer>
-        <NetworkFooter />
-      </footer>
+      <NetworkFooter />
     </div>
   );
 }
