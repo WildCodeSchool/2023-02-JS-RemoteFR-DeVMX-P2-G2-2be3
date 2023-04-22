@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import logoNutridriveNB from "../../assets/logoNutridriveNB.png";
 import qrcode from "../../assets/qrcode.png";
+import QuantityContext from "../../services/context";
 
 function Receipt() {
+  const { basketProduct } = useContext(QuantityContext);
   return (
     <div className="receiptContainer">
       <img
@@ -14,7 +17,10 @@ function Receipt() {
         Micheline
       </h2>
       <div className="receipt-details">
-        <p>Pizza, tomate, mozza....................................x1</p>
+        <p>
+          {basketProduct.productName}.....................
+          {basketProduct.quantityProduct}
+        </p>
         <p>Céréales Bjorg, flocon..................................x2</p>
         <p>Pizza, tomate, mozza....................................x1</p>
         <p>Céréales Bjorg, flocon..................................x2</p>

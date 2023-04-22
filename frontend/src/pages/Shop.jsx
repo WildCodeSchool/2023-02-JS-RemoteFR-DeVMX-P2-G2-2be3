@@ -14,7 +14,6 @@ import "../style/Shop.css";
 function Shop() {
   const [searchInput, setSearchInput] = useState("");
   const [selectedNutriScore, setSelectedNutriScore] = useState(null);
-  const [itemQuantity, setItemQuantity] = useState(0);
   const [openModal, setOpenModal] = useState(false);
   const [dataModal, setDataModal] = useState(null);
 
@@ -56,8 +55,6 @@ function Shop() {
                   productName={product.product_name_fr}
                   ingredientsText={cleanIngredientsText}
                   nutriScoreGrade={product.nutriscore_grade}
-                  setItemQuantity={setItemQuantity}
-                  itemQuantity={itemQuantity}
                   setOpenModal={setOpenModal}
                   openModal={openModal}
                   product={product}

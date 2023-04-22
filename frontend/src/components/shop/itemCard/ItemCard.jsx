@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { PropTypes } from "prop-types";
+import QuantityContext from "../../../services/context";
 import ItemCardQuantityButton from "./ItemCardQuantityButton";
 
 import "../../../style/shopStyle/itemCard/ItemCard.css";
@@ -14,18 +15,8 @@ function ItemCard({
   product,
   setDataModal,
 }) {
+  const { basketProduct } = useContext(QuantityContext);
   const [isFavorite, setIsFavorite] = useState(false);
-  const [itemQuantity, setItemQuantity] = useState(0);
-
-  const handleClickAdd = () => {
-    setItemQuantity(itemQuantity + 1);
-  };
-
-  const handleClickRemove = () => {
-    if (itemQuantity > 0) {
-      setItemQuantity(itemQuantity - 1);
-    }
-  };
 
   const handleClickIsFavorite = () => {
     setIsFavorite(!isFavorite);
@@ -74,13 +65,9 @@ function ItemCard({
         >
           star
         </span>
-        <span>{itemQuantity}</span>
+        <span>{basketProduct.quantityProduct}</span>
         <div className="button-quantity-container">
-          <ItemCardQuantityButton
-            handleClick={handleClickRemove}
-            icon="remove"
-          />
-          <ItemCardQuantityButton handleClick={handleClickAdd} icon="add" />
+          <ItemCardQuantityButton product={product} />
         </div>
       </div>
     </div>
