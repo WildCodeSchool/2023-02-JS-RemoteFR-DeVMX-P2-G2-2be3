@@ -13,8 +13,8 @@ import "../style/Shop.css";
 
 function Shop() {
   const [searchInput, setSearchInput] = useState("");
-  const [itemQuantity, setItemQuantity] = useState(0);
   const [selectedNutriScore, setSelectedNutriScore] = useState(null);
+  const [itemQuantity, setItemQuantity] = useState(0);
   const [openModal, setOpenModal] = useState(false);
   const [dataModal, setDataModal] = useState(null);
 
@@ -28,7 +28,7 @@ function Shop() {
         <section className="search-section">
           <SearchBar setSearchInput={setSearchInput} />
           <BtnNutriScore setSelectedNutriScore={setSelectedNutriScore} />
-          <CategorySelect />
+          <CategorySelect setCategory={setSearchInput} />
         </section>
       </div>
       <section className="itemCard-section">
@@ -80,9 +80,7 @@ function Shop() {
           />
         )}
       </section>
-      <footer>
-        <NetworkFooter />
-      </footer>
+      <NetworkFooter />
     </div>
   );
 }
