@@ -19,7 +19,7 @@ function Receipt() {
       <div className="receipt-details">
         {organizedBasketInfo &&
           organizedBasketInfo.map((product) => (
-            <div key={product.occurrence}>
+            <div key={product.productBasketName}>
               <span>{product.productBasketName}</span>
               <span>.......</span>
               <span>{product.occurrence}</span>
