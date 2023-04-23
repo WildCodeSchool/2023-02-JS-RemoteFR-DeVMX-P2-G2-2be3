@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import BasketQuantityProductContext from "../../services/context";

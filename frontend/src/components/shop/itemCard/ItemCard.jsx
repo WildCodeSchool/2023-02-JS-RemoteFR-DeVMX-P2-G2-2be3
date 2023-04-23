@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { PropTypes } from "prop-types";
-// import BasketQuantityProductContext from "../../../services/context";
 import ItemCardQuantityButton from "./ItemCardQuantityButton";
 
 import "../../../style/shopStyle/itemCard/ItemCard.css";

@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 import { useContext, useState } from "react";
 import { PropTypes } from "prop-types";
 import BasketQuantityProductContext from "../../../services/context";
@@ -42,13 +40,14 @@ function ItemCardQuantityButton({ product }) {
 }
 
 ItemCardQuantityButton.propTypes = {
-  product: PropTypes.shape({}),
-  // product_name_fr: PropTypes.string,
+  product: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    product_name_fr: PropTypes.string.isRequired,
+  }),
 };
 
 ItemCardQuantityButton.defaultProps = {
   product: "There are not product",
-  // product_name_fr: "There is no name",
 };
 
 export default ItemCardQuantityButton;
