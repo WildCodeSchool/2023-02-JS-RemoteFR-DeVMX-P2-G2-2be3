@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import logoNutridriveNB from "../../assets/logoNutridriveNB.png";
 import qrcode from "../../assets/qrcode.png";
-import QuantityContext from "../../services/context";
+import BasketQuantityProductContext from "../../services/context";
 
 function Receipt() {
-  const { basketProduct } = useContext(QuantityContext);
+  const { organizedBasketInfo } = useContext(BasketQuantityProductContext);
   return (
     <div className="receiptContainer">
       <img
@@ -17,18 +17,14 @@ function Receipt() {
         Micheline
       </h2>
       <div className="receipt-details">
-        <p>
-          {basketProduct.productName}.....................
-          {basketProduct.quantityProduct}
-        </p>
-        <p>Céréales Bjorg, flocon..................................x2</p>
-        <p>Pizza, tomate, mozza....................................x1</p>
-        <p>Céréales Bjorg, flocon..................................x2</p>
-        <p>Pizza, tomate, mozza....................................x1</p>
-        <p>Céréales Bjorg, flocon..................................x2</p>
-        <p>Pizza, tomate, mozza....................................x1</p>
-        <p>Céréales Bjorg, flocon..................................x2</p>
-        <p>Pizza, tomate, mozza....................................x1</p>
+        {organizedBasketInfo &&
+          organizedBasketInfo.map((product) => (
+            <div key={product.occurrence}>
+              <span>{product.productBasketName}</span>
+              <span>.......</span>
+              <span>{product.occurrence}</span>
+            </div>
+          ))}
         <p>Céréales Bjorg, flocon..................................x2</p>
       </div>
       <img className="img-qrcode" src={qrcode} alt="QR Code" />
