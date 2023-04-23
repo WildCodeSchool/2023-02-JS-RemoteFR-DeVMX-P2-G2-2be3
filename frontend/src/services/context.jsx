@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable react/prop-types */
 import { createContext, useState } from "react";
 
@@ -5,6 +7,11 @@ const BasketQuantityProductContext = createContext();
 
 export function BasketQuantityProductProvider({ children }) {
   const [basketQuantityProduct, setBasketQuantityProduct] = useState([]);
+
+  console.log(
+    "🚀 ~ file: context.jsx:8 ~ BasketQuantityProductProvider ~ basketQuantityProduct:",
+    basketQuantityProduct
+  );
 
   const handleClickAdd = (
     productId,
@@ -26,14 +33,18 @@ export function BasketQuantityProductProvider({ children }) {
     productBasketName,
     quantityProductBasket
   ) => {
-    setBasketQuantityProduct((existingValue) => [
-      ...existingValue,
-      {
-        productId,
-        productBasketName,
-        quantityProductBasket,
-      },
-    ]);
+    // if productId already exist in the basket, remove the object
+    const filteredBasket = basketQuantityProduct.filter(
+      (item) =>
+        item.productId !== productId ||
+        item.quantityProductBasket !== quantityProductBasket - 1
+    );
+    console.log(
+      "🚀 ~ file: context.jsx:39 ~ BasketQuantityProductProvider ~ filteredBasket:",
+      filteredBasket
+    );
+
+    setBasketQuantityProduct(filteredBasket);
   };
 
   function findOcc(arr, key) {
@@ -71,6 +82,10 @@ export function BasketQuantityProductProvider({ children }) {
   const organizedBasketInfo = findOcc(
     basketQuantityProduct,
     "productBasketName"
+  );
+  console.log(
+    "🚀 ~ file: context.jsx:76 ~ BasketQuantityProductProvider ~ organizedBasketInfo:",
+    organizedBasketInfo
   );
 
   return (

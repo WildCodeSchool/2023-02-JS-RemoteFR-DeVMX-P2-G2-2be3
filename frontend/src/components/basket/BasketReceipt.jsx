@@ -25,7 +25,6 @@ function Receipt() {
               <span>{product.occurrence}</span>
             </div>
           ))}
-        <p>Céréales Bjorg, flocon..................................x2</p>
       </div>
       <img className="img-qrcode" src={qrcode} alt="QR Code" />
       <h1>MERCI DE VOTRE VISITE</h1>
