@@ -1,55 +1,47 @@
-header {
-  padding-top: 3%;
-  margin-left: 2%;
-  margin-bottom: 5%;
-  display: flex;
-  justify-content: space-between;
-}
-
 header .imgLogoHeader {
   height: auto;
   width: 30%;
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  --_m: from 90deg at bottom;
+  padding-bottom: var(--s);
+  background: conic-gradient(
+      var(--_m) var(--d) left 50%,
+      #0004 135deg,
+      #0009 0 270deg,
+      #0000 0
+    )
+    50% / var(--s);
 }
 
 header .idBasket {
-  background-color: #19753e;
-  width: 70%;
-  margin-top: 2%;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  width: 70%;
+}
+
+.top {
+  padding-bottom: 40px;
+  --s: 70px; /* control the size */
+  --d: 0px; /* control the depth */
+  mask: conic-gradient(var(--_m), #0000 70%, #000 0) 50% / var(--s);
+  background-color: #098305; /* the main color */
 }
 
 .idBasket h3 {
   margin: auto;
+  margin-bottom: 10px;
   color: white;
   font-size: 2.7vw;
 }
 
 .idBasket button {
   margin: auto 2% auto 0%;
-}
-
-header:nth-child(1) {
-  transform: rotate(0deg);
-}
-
-header:nth-child(2) {
-  transform: rotate(90deg);
-}
-
-header:nth-child(3) {
-  transform: rotate(180deg);
-}
-
-header:nth-child(4) {
-  transform: rotate(270deg);
-}
-
-header:before {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  width: 100%;
-  height: 3px;
+  margin-bottom: 10px;
 }
