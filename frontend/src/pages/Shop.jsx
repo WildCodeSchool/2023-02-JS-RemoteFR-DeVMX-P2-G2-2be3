@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import SearchBar from "../components/shop/searchContainer/SearchBar";
 import BtnNutriScore from "../components/shop/searchContainer/BtnNutriScore";
 import CategorySelect from "../components/shop/searchContainer/CategorySelect";
@@ -11,7 +12,7 @@ import useFetch from "../services/useFetch";
 
 import "../style/Shop.css";
 
-function Shop() {
+function Shop({ user }) {
   const [searchInput, setSearchInput] = useState("");
   const [selectedNutriScore, setSelectedNutriScore] = useState(null);
   const [itemQuantity, setItemQuantity] = useState(0);
@@ -24,7 +25,7 @@ function Shop() {
   return (
     <div className="shop">
       <div>
-        <Header />
+        <Header user={user} />
         <section className="search-section">
           <SearchBar setSearchInput={setSearchInput} />
           <BtnNutriScore setSelectedNutriScore={setSelectedNutriScore} />
@@ -84,5 +85,9 @@ function Shop() {
     </div>
   );
 }
+
+Shop.propTypes = {
+  user: PropTypes.string.isRequired,
+};
 
 export default Shop;
