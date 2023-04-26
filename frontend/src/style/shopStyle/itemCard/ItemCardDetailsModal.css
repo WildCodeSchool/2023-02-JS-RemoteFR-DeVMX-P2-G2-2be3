@@ -27,6 +27,11 @@
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   border-radius: 1rem;
   overflow-y: auto;
+  stroke-width: 5px;; 
+  border-bottom: 5px solid rgb(51, 80, 70);
+  border-right: 5px solid rgb(51, 80, 70);
+  transition-timing-function: linear;
+  transition: stroke-dashoffset 4s, stroke-dasharray 4s;
 }
 
 .button-modal-details {
@@ -43,6 +48,11 @@
 .itemCardDetailsModal-title {
   text-align: center;
   font-size: 1.2rem;
+  border: 3mm ridge rgba(211, 220, 50, .6);
+  border-radius: 30%;
+  background-color: rgb(51, 80, 70);
+  color: rgb(230, 231, 222);
+  padding: 10px;
 }
 
 .imageAndNutriScore-container {
