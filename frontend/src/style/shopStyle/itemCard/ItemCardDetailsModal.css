@@ -19,6 +19,7 @@
 .modal-details {
   max-width: 80%;
   height: 80vh;
+  width: 80%;
   padding: 2rem;
   color: black;
   background-color:whitesmoke;
@@ -39,6 +40,7 @@
   padding: 0.3rem;
   border: none;
   background-color: whitesmoke;
+  margin-left: 90%;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -49,6 +51,11 @@
 .itemCardDetailsModal-title {
   text-align: center;
   font-size: 1.2rem;
+  border: 2mm ridge rgba(211, 220, 50, .6);
+  border-radius: 30%;
+  background-color: rgb(51, 80, 70);
+  color: rgb(230, 231, 222);
+  padding: 10px;
 }
 
 .imageAndNutriScore-container {
