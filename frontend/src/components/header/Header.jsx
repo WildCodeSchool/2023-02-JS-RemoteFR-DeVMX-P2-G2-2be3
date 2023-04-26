@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import ImageLogo from "@assets/NutriDrive_02_02.jpeg";
+import ImageLogo from "@assets/NutriDrive_02_02.jpg";
 import ButtonBasket from "./ButtonBasket";
 
 function Header() {
