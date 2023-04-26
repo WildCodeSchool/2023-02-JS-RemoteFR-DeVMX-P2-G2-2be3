@@ -21,12 +21,18 @@
   height: 80vh;
   padding: 2rem;
   color: black;
-  background-color: whitesmoke;
+  background-color:whitesmoke;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   border-radius: 1rem;
   overflow-y: auto;
+  stroke-dasharray: 1120;
+  stroke-width: 5px;; 
+  border-bottom: 5px solid rgb(51, 80, 70);
+  border-right: 5px solid rgb(51, 80, 70);
+  transition-timing-function: linear;
+  transition: stroke-dashoffset 4s, stroke-dasharray 4s;
 }
 
 .button-modal-details {
