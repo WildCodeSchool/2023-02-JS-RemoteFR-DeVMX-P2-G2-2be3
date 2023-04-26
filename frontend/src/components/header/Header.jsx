@@ -4,7 +4,7 @@ import ButtonBasket from "./ButtonBasket";
 
 function Header() {
   return (
-    <header>
+    <header className="top">
       <img className="imgLogoHeader" src={ImageLogo} alt="Logo NutriDrive" />
       <div className="idBasket">
         <h3>Bonjour Toto</h3>
