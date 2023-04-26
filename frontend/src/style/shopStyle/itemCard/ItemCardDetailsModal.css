@@ -150,6 +150,12 @@
   text-align: center;
   line-height: 24px;
   overflow-y: initial;
+  border-style: dashed double;
+  border-radius: 10%;
+  border-color: black;
+  background-color: #5cb85c;
+  color: white;
+  font-size: italic;
 }
 
 @media screen and (min-width: 414px) {
@@ -157,7 +163,12 @@
     max-width: 75%;
     height: 80vh;
   }
+  .modal-ingredients-details {
+  margin-left: 8rem;
+  margin-right: 8rem;
 }
+}
+
 @media screen and (min-width: 768px) {
   .modal-details {
     max-width: 60%;
