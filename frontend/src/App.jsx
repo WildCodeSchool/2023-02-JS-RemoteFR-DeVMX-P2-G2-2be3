@@ -15,7 +15,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home handleClickUser={handleClickUser} />} />
-      <Route path="/shop" element={<Shop user={user} />} />
+      <Route path="/shop" element={<Shop user={user} setUser={setUser} />} />
       <Route
         path="/basket"
         element={<Basket user={user} setUser={setUser} />}

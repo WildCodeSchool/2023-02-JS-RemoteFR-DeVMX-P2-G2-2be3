@@ -19,16 +19,17 @@
 .modal-details {
   max-width: 80%;
   height: 80vh;
+  width: 80%;
   padding: 2rem;
   color: black;
-  background-color: whitesmoke;
+  background-color:whitesmoke;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   border-radius: 1rem;
   overflow-y: auto;
   stroke-dasharray: 1120;
-  stroke-width: 5px;
+  stroke-width: 5px;; 
   border-bottom: 5px solid rgb(51, 80, 70);
   border-right: 5px solid rgb(51, 80, 70);
   transition-timing-function: linear;
@@ -39,6 +40,7 @@
   padding: 0.3rem;
   border: none;
   background-color: whitesmoke;
+  margin-left: 90%;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -49,6 +51,11 @@
 .itemCardDetailsModal-title {
   text-align: center;
   font-size: 1.2rem;
+  border: 2mm ridge rgba(211, 220, 50, .6);
+  border-radius: 30%;
+  background-color: rgb(51, 80, 70);
+  color: rgb(230, 231, 222);
+  padding: 10px;
 }
 
 .imageAndNutriScore-container {
@@ -143,6 +150,12 @@
   text-align: center;
   line-height: 24px;
   overflow-y: initial;
+  border-style: dashed double;
+  border-radius: 10%;
+  border-color: black;
+  background-color: #5cb85c;
+  color: white;
+  font-size: italic;
 }
 
 @media screen and (min-width: 414px) {
@@ -150,7 +163,12 @@
     max-width: 75%;
     height: 80vh;
   }
+  .modal-ingredients-details {
+  margin-left: 8rem;
+  margin-right: 8rem;
 }
+}
+
 @media screen and (min-width: 768px) {
   .modal-details {
     max-width: 60%;
