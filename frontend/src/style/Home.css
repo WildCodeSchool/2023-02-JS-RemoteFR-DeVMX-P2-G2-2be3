@@ -38,6 +38,19 @@ main {
   position: relative;
   bottom: 50px;
   box-shadow: 1px 3px 8px 1px rgba(0, 0, 0, 0.3);
+  animation: floatImage 3s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .formConnect {
@@ -57,6 +70,18 @@ main {
   border: 1px solid gray;
   border-radius: 10px;
   padding-left: 10px;
+  animation: slideRight 2s ease-in-out;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .inputPassword {
@@ -67,6 +92,18 @@ main {
   border: 1px solid gray;
   border-radius: 10px;
   padding-left: 10px;
+  animation: slideLeft 2s ease-in-out;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .buttonConnect {
@@ -77,6 +114,18 @@ main {
   border-radius: 10px;
   font-size: 1.5rem;
   transition: 0.2s ease-in-out;
+  animation: slideTop 2s;
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .buttonConnect:hover {
