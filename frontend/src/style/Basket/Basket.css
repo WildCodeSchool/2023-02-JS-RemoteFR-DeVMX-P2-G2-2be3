@@ -4,12 +4,16 @@
 
 .basket {
   background-image: url(/src/assets/bg_body.png);
-  position: fixed;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
+}
+
+.basketTicketContainer {
+  display: flex;
+  flex-direction: column;
 }
 
 .buttonReturn,

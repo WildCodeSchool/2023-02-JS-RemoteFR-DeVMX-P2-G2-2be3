@@ -13,9 +13,11 @@ function Basket({ user }) {
   return (
     <div className="basket">
       <Header user={user} />
-      <ButtonReturn />
-      <Receipt />
-      <ButtonValide />
+      <div className="basketTicketContainer">
+        <ButtonReturn />
+        <Receipt />
+        <ButtonValide />
+      </div>
       <NetworkFooter />
     </div>
   );
