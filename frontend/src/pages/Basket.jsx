@@ -9,7 +9,7 @@ import "../style/Basket/BasketReceipt.css";
 import "../style/Header.css";
 import "../style/Basket/ModalButtonValide.css";
 
-function Basket({ user }) {
+function Basket({ user, cartItems }) {
   return (
     <div className="basket">
       <Header user={user} />
@@ -25,6 +25,7 @@ function Basket({ user }) {
 
 Basket.propTypes = {
   user: PropTypes.string.isRequired,
+  cartItems: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
 };
 
 export default Basket;

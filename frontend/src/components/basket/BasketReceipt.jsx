@@ -1,9 +1,8 @@
-/* eslint-disable import/no-unresolved */
-// eslint-disable-next-line import/no-unresolved
-import logoNutridriveNB from "@assets/logoNutridriveNB.png";
-import qrcode from "@assets/qr_code.png";
+import { PropTypes } from "prop-types";
+import logoNutridriveNB from "../../assets/logoNutridriveNB.png";
+import qrcode from "../../assets/qr_code.png";
 
-function Receipt() {
+function Receipt({ cartItems }) {
   return (
     <div className="receiptContainer">
       <img
@@ -16,16 +15,14 @@ function Receipt() {
         Micheline
       </h2>
       <div className="receipt-details">
-        <p>Pizza, tomate, mozza....................................x1</p>
-        <p>Céréales Bjorg, flocon..................................x2</p>
-        <p>Pizza, tomate, mozza....................................x1</p>
-        <p>Céréales Bjorg, flocon..................................x2</p>
-        <p>Pizza, tomate, mozza....................................x1</p>
-        <p>Céréales Bjorg, flocon..................................x2</p>
-        <p>Pizza, tomate, mozza....................................x1</p>
-        <p>Céréales Bjorg, flocon..................................x2</p>
-        <p>Pizza, tomate, mozza....................................x1</p>
-        <p>Céréales Bjorg, flocon..................................x2</p>
+        {cartItems &&
+          cartItems.map((item) => (
+            <div>
+              <span>{item.product_name_fr}</span>
+              <span>........</span>
+              <span>{item.quantity}</span>
+            </div>
+          ))}
       </div>
       <img className="img-qrcode" src={qrcode} alt="QR Code" />
       <h1>MERCI DE VOTRE VISITE</h1>
@@ -33,5 +30,9 @@ function Receipt() {
     </div>
   );
 }
+
+Receipt.propTypes = {
+  cartItems: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
+};
 
 export default Receipt;
