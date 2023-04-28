@@ -1,11 +1,11 @@
 header .imgLogoHeader {
-  height: auto;
-  width: 30%;
+  width: auto;
+  max-height: 7vh;
 }
 
 header {
   display: flex;
-  height: 15vh;
+  height: 70px;
   align-items: center;
   justify-content: space-between;
   --_m: from 90deg at bottom;
@@ -38,7 +38,7 @@ header .idBasket {
   margin: auto;
   margin-bottom: 10px;
   color: white;
-  font-size: 2.7vw;
+  font-size: 2vh;
 }
 
 .idBasket button {
