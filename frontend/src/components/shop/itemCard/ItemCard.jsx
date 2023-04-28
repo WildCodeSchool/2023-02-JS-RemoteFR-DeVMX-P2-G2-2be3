@@ -92,7 +92,7 @@ ItemCard.propTypes = {
     productName: PropTypes.string,
     ingredientsText: PropTypes.string,
     nutriScoreGrade: PropTypes.string,
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
   }).isRequired,
   setDataModal: PropTypes.func.isRequired,
   handleRemoveItem: PropTypes.func.isRequired,

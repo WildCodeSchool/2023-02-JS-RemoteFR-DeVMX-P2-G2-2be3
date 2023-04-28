@@ -17,7 +17,7 @@ function Receipt({ cartItems }) {
       <div className="receipt-details">
         {cartItems &&
           cartItems.map((item) => (
-            <div>
+            <div key={item.id}>
               <span>{item.product_name_fr}</span>
               <span>........</span>
               <span>{item.quantity}</span>
