@@ -13,9 +13,11 @@ function Basket({ user, cartItems }) {
   return (
     <div className="basket">
       <Header user={user} />
-      <ButtonReturn />
-      <Receipt cartItems={cartItems} />
-      <ButtonValide />
+      <div className="basketTicketContainer">
+        <ButtonReturn />
+        <Receipt />
+        <ButtonValide />
+      </div>
       <NetworkFooter />
     </div>
   );
