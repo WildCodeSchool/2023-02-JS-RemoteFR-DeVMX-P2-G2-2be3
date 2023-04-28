@@ -15,7 +15,7 @@ function Basket({ user, cartItems }) {
       <Header user={user} />
       <div className="basketTicketContainer">
         <ButtonReturn />
-        <Receipt />
+        <Receipt cartItems={cartItems} />
         <ButtonValide />
       </div>
       <NetworkFooter />
