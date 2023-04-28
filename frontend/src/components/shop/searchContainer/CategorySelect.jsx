@@ -17,7 +17,7 @@ function CategorySelect({ setCategory }) {
         <option value="fromage">Fromages</option>
         <option value="cafe">Cafe</option>
         <option value="pizzas">Pizzas</option>
-        <option value="ris">Ris</option>
+        <option value="riz">Riz</option>
         <option value="bananes">Bananes</option>
         <option value="lait">Lait</option>
       </select>
