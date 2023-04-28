@@ -13,19 +13,12 @@ function ItemCard({
   openModal,
   product,
   setDataModal,
+  handleRemoveItem,
+  handleAddItem,
+  cartItems,
 }) {
   const [isFavorite, setIsFavorite] = useState(false);
-  const [itemQuantity, setItemQuantity] = useState(0);
-
-  const handleClickAdd = () => {
-    setItemQuantity(itemQuantity + 1);
-  };
-
-  const handleClickRemove = () => {
-    if (itemQuantity > 0) {
-      setItemQuantity(itemQuantity - 1);
-    }
-  };
+  const existingItem = cartItems.find((item) => item.id === product.id);
 
   const handleClickIsFavorite = () => {
     setIsFavorite(!isFavorite);
@@ -74,13 +67,13 @@ function ItemCard({
         >
           star
         </span>
-        <span>{itemQuantity}</span>
+        <span>{existingItem ? existingItem.quantity : 0}</span>
         <div className="button-quantity-container">
           <ItemCardQuantityButton
-            handleClick={handleClickRemove}
-            icon="remove"
+            product={product}
+            handleRemoveItem={handleRemoveItem}
+            handleAddItem={handleAddItem}
           />
-          <ItemCardQuantityButton handleClick={handleClickAdd} icon="add" />
         </div>
       </div>
     </div>
@@ -99,8 +92,12 @@ ItemCard.propTypes = {
     productName: PropTypes.string,
     ingredientsText: PropTypes.string,
     nutriScoreGrade: PropTypes.string,
+    id: PropTypes.number.isRequired,
   }).isRequired,
   setDataModal: PropTypes.func.isRequired,
+  handleRemoveItem: PropTypes.func.isRequired,
+  handleAddItem: PropTypes.func.isRequired,
+  cartItems: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
 };
 
 ItemCard.defaultProps = {
