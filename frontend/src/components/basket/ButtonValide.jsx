@@ -18,7 +18,7 @@ function ButtonValide() {
               <span className="close" onClick={openModal}>
                 &times;
               </span>
-              <h2>Confirmation</h2>
+              <h2>&#128079; Confirmation &#128079;</h2>
             </div>
             <div className="modal-body">
               <p>Votre commande a bien été validée</p>
