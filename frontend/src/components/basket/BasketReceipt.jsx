@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { PropTypes } from "prop-types";
 import QRcode from "qrcode";
 import logoNutridriveNB from "../../assets/logoNutridriveNB.png";
-// import qrcode from "../../assets/qr_code.png";
 import BasketReceiptQuantityButtons from "./BasketReceiptQuantityButtons";
 
 function Receipt({ cartItems, handleRemoveItem, handleAddItem }) {
@@ -13,9 +12,13 @@ function Receipt({ cartItems, handleRemoveItem, handleAddItem }) {
       (item) => `${item.product_name_fr}.......X${item.quantity}\n`
     );
 
-    QRcode.toDataURL(cartItemsQrcode, (err, url) => {
-      return setQrcode(url);
-    });
+    QRcode.toDataURL(
+      cartItemsQrcode,
+      { margin: 3, color: { dark: "#6dc96bff" } },
+      (err, url) => {
+        return setQrcode(url);
+      }
+    );
   }, [cartItems]);
   return (
     <div className="receiptContainer">
