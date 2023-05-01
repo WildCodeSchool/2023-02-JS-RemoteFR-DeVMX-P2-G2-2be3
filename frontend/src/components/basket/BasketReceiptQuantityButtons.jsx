@@ -18,14 +18,18 @@ function BasketReceiptQuantityButtons({
         onClick={() => handleRemoveItem(itemClickedInReceipt)}
         className="receipt-quantity-buttons"
       >
-        <span className="material-symbols-outlined">remove</span>
+        <span className="material-symbols-outlined receipt-quantity-buttons-icons">
+          remove
+        </span>
       </button>
       <button
         type="button"
         onClick={() => handleAddItem(itemClickedInReceipt)}
         className="receipt-quantity-buttons"
       >
-        <span className="material-symbols-outlined">add</span>
+        <span className="material-symbols-outlined receipt-quantity-buttons-icons">
+          add
+        </span>
       </button>
     </div>
   );
