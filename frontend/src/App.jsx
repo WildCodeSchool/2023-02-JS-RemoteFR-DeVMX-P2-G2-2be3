@@ -9,6 +9,9 @@ import "./App.css";
 function App() {
   const [user, setUser] = useState("");
   const [cartItems, setCartItems] = useState([]);
+  const [cartItemsFavorite, setCartItemsFavorite] = useState([]);
+
+  const [isFavorite, setIsFavorite] = useState(true);
 
   const handleClickUser = (event) => {
     setUser(event);
@@ -42,6 +45,22 @@ function App() {
     );
   };
 
+  const handleFavoriteItem = (clickedItem) => {
+    // const isFavorite = true;
+    setCartItemsFavorite((prev) => {
+      const isItemInCart = prev.find((item) => item.id === clickedItem.id);
+
+      if (isItemInCart) {
+        setIsFavorite(!isFavorite);
+        return prev.map((item) =>
+          item.id === clickedItem.id ? { ...item, isFavorite } : item
+        );
+      }
+      setIsFavorite(true);
+      return [...prev, { ...clickedItem, isFavorite }];
+    });
+  };
+
   return (
     <Routes>
       <Route path="/" element={<Home handleClickUser={handleClickUser} />} />
@@ -53,7 +72,9 @@ function App() {
             setUser={setUser}
             handleRemoveItem={handleRemoveItem}
             handleAddItem={handleAddItem}
+            handleFavoriteItem={handleFavoriteItem}
             cartItems={cartItems}
+            cartItemsFavorite={cartItemsFavorite}
           />
         }
       />

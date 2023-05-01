@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { PropTypes } from "prop-types";
 import ItemCardQuantityButton from "./ItemCardQuantityButton";
 
@@ -15,14 +15,15 @@ function ItemCard({
   setDataModal,
   handleRemoveItem,
   handleAddItem,
+  handleFavoriteItem,
   cartItems,
+  cartItemsFavorite,
 }) {
-  const [isFavorite, setIsFavorite] = useState(false);
   const existingItem = cartItems.find((item) => item.id === product.id);
 
-  const handleClickIsFavorite = () => {
-    setIsFavorite(!isFavorite);
-  };
+  const existingFavoriteItem = cartItemsFavorite.find(
+    (favoriteItem) => favoriteItem.id === product.id
+  );
 
   const handleSetDataModalAndOpen = (itemProduct, event) => {
     if (event.type === "click") {
@@ -58,9 +59,9 @@ function ItemCard({
           role="button"
           tabIndex="0"
           onKeyDown={() => {}}
-          onClick={(event) => handleClickIsFavorite(event)}
+          onClick={() => handleFavoriteItem(product)}
           className={
-            isFavorite
+            existingFavoriteItem && existingFavoriteItem.isFavorite === true
               ? "material-symbols-outlined favorite-icon isFavorite"
               : "material-symbols-outlined favorite-icon"
           }
@@ -97,7 +98,9 @@ ItemCard.propTypes = {
   setDataModal: PropTypes.func.isRequired,
   handleRemoveItem: PropTypes.func.isRequired,
   handleAddItem: PropTypes.func.isRequired,
+  handleFavoriteItem: PropTypes.func.isRequired,
   cartItems: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
+  cartItemsFavorite: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
 };
 
 ItemCard.defaultProps = {
