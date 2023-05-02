@@ -31,10 +31,10 @@ function Receipt({ cartItems, handleRemoveItem, handleAddItem }) {
       <div className="receipt-details">
         {cartItems &&
           cartItems.map((item) => (
-            <div key={item.id}>
-              <span>{item.product_name_fr}</span>
-              <span>........</span>
-              <span>{item.quantity}</span>
+            <div className="item-receipt" key={item.id}>
+              <span className="item-receipt-title">{item.product_name_fr}</span>
+              <span className="item-receipt-space">........</span>
+              <span className="item-receipt-quantity">{item.quantity}</span>
               <BasketReceiptQuantityButtons
                 handleRemoveItem={handleRemoveItem}
                 handleAddItem={handleAddItem}

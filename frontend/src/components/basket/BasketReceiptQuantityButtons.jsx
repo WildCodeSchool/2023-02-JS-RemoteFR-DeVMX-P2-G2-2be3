@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 
+import "../../style/Basket/BasketReceiptQuantityButtons.css";
+
 function BasketReceiptQuantityButtons({
   cartItems,
   handleRemoveItem,
@@ -10,22 +12,26 @@ function BasketReceiptQuantityButtons({
     (item) => item.id === itemInReceipt.id
   );
   return (
-    <>
+    <div className="receipt-quantity-buttons-container">
       <button
         type="button"
         onClick={() => handleRemoveItem(itemClickedInReceipt)}
-        className="itemCard-quantity-button"
+        className="receipt-quantity-buttons"
       >
-        <span className="material-symbols-outlined">remove</span>
+        <span className="material-symbols-outlined receipt-quantity-buttons-icons">
+          remove
+        </span>
       </button>
       <button
         type="button"
         onClick={() => handleAddItem(itemClickedInReceipt)}
-        className="itemCard-quantity-button"
+        className="receipt-quantity-buttons"
       >
-        <span className="material-symbols-outlined">add</span>
+        <span className="material-symbols-outlined receipt-quantity-buttons-icons">
+          add
+        </span>
       </button>
-    </>
+    </div>
   );
 }
 
