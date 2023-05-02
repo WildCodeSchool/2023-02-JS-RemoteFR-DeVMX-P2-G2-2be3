@@ -14,7 +14,7 @@ function Receipt({ cartItems, handleRemoveItem, handleAddItem }) {
 
     QRcode.toDataURL(
       cartItemsQrcode,
-      { margin: 3, color: { dark: "#6dc96bff" } },
+      { margin: 3, color: { dark: "#333333ff" } },
       (err, url) => {
         return setQrcode(url);
       }
