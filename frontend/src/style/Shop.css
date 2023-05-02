@@ -13,11 +13,50 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  height: 56vh;
-  top: 35vh;
-  overflow: scroll;
+  height: 54%;
+  top: 225px;
+  overflow-y: scroll;
   position: fixed;
   font-family: "Roboto", sans-serif;
+}
+
+@media screen and (min-width: 796px) {
+  .itemCard-section {
+    top: 150px;
+  }
+}
+
+@media screen and (min-height: 700px) {
+  .itemCard-section {
+    height: 62vh;
+  }
+}
+
+@media screen and (min-height: 800px) {
+  .itemCard-section {
+    height: 74vh;
+  }
+}
+
+@media screen and (min-height: 900px) {
+  .itemCard-section {
+    height: 77vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+  .itemCard-section {
+    height: 79vh;
+  }
+}
+
+@media screen and (min-height: 1080px) {
+  .itemCard-section {
+    height: 81vh;
+  }
 }
 
 .fill-section {
