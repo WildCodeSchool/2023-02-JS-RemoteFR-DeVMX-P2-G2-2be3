@@ -9,6 +9,7 @@ import "./App.css";
 function App() {
   const [user, setUser] = useState("");
   const [cartItems, setCartItems] = useState([]);
+  const [cartItemsFavorite, setCartItemsFavorite] = useState([]);
 
   const handleClickUser = (event) => {
     setUser(event);
@@ -17,7 +18,6 @@ function App() {
   const handleAddItem = (clickedItem) => {
     setCartItems((prev) => {
       const isItemInCart = prev.find((item) => item.id === clickedItem.id);
-
       if (isItemInCart) {
         return prev.map((item) =>
           item.id === clickedItem.id
@@ -25,21 +25,37 @@ function App() {
             : item
         );
       }
-
       return [...prev, { ...clickedItem, quantity: 1 }];
     });
   };
 
-  const handleRemoveItem = (prod) => {
+  const handleRemoveItem = (clickedItem) => {
     setCartItems((prev) =>
       prev.reduce((ack, item) => {
-        if (item.id === prod.id) {
+        if (item.id === clickedItem.id) {
           if (item.quantity === 1) return ack;
           return [...ack, { ...item, quantity: item.quantity - 1 }];
         }
         return [...ack, item];
       }, [])
     );
+  };
+
+  const handleFavoriteItem = (clickedItem) => {
+    setCartItemsFavorite((prev) => {
+      const isItemInCart = prev.find((item) => item.id === clickedItem.id);
+      if (isItemInCart) {
+        if (isItemInCart.isFavorite) {
+          return prev.map((item) =>
+            item.id === clickedItem.id ? { ...item, isFavorite: false } : item
+          );
+        }
+        return prev.map((item) =>
+          item.id === clickedItem.id ? { ...item, isFavorite: true } : item
+        );
+      }
+      return [...prev, { ...clickedItem, isFavorite: true }];
+    });
   };
 
   return (
@@ -53,7 +69,9 @@ function App() {
             setUser={setUser}
             handleRemoveItem={handleRemoveItem}
             handleAddItem={handleAddItem}
+            handleFavoriteItem={handleFavoriteItem}
             cartItems={cartItems}
+            cartItemsFavorite={cartItemsFavorite}
           />
         }
       />

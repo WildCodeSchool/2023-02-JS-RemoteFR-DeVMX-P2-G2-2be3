@@ -12,7 +12,14 @@ import useFetch from "../services/useFetch";
 
 import "../style/Shop.css";
 
-function Shop({ user, handleRemoveItem, handleAddItem, cartItems }) {
+function Shop({
+  user,
+  handleRemoveItem,
+  handleAddItem,
+  handleFavoriteItem,
+  cartItems,
+  cartItemsFavorite,
+}) {
   const [searchInput, setSearchInput] = useState("");
   const [selectedNutriScore, setSelectedNutriScore] = useState(null);
   const [itemQuantity, setItemQuantity] = useState(0);
@@ -65,7 +72,9 @@ function Shop({ user, handleRemoveItem, handleAddItem, cartItems }) {
                   setDataModal={setDataModal}
                   handleRemoveItem={handleRemoveItem}
                   handleAddItem={handleAddItem}
+                  handleFavoriteItem={handleFavoriteItem}
                   cartItems={cartItems}
+                  cartItemsFavorite={cartItemsFavorite}
                 />
               );
             })}
@@ -93,7 +102,9 @@ Shop.propTypes = {
   user: PropTypes.string.isRequired,
   handleRemoveItem: PropTypes.func.isRequired,
   handleAddItem: PropTypes.func.isRequired,
+  handleFavoriteItem: PropTypes.func.isRequired,
   cartItems: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
+  cartItemsFavorite: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
 };
 
 export default Shop;
