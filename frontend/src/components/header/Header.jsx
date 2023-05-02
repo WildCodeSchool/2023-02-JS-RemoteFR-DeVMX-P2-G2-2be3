@@ -7,7 +7,7 @@ import ButtonBasket from "./ButtonBasket";
 function Header({ user }) {
   return (
     <header className="top">
-      <Link to="/">
+      <Link to="/" style={{ width: "auto" }}>
         <img className="imgLogoHeader" src={ImageLogo} alt="Logo NutriDrive" />
       </Link>
       <div className="idBasket">
