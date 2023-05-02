@@ -6,20 +6,28 @@ import BasketReceiptQuantityButtons from "./BasketReceiptQuantityButtons";
 
 function Receipt({ cartItems, handleRemoveItem, handleAddItem }) {
   const [qrcode, setQrcode] = useState("");
+  const [totalItemsQuantity, setTotalItemsQuantity] = useState(0);
 
   useEffect(() => {
     const cartItemsQrcode = cartItems.map(
       (item) => `${item.product_name_fr}.......X${item.quantity}\n`
     );
 
+    if (cartItems) {
+      const totalQuantity = cartItems.reduce((acc, item) => {
+        return acc + item.quantity;
+      }, 0);
+      setTotalItemsQuantity(totalQuantity);
+    }
+
     QRcode.toDataURL(
-      cartItemsQrcode,
+      `${cartItemsQrcode}\n Quantité totale: ${totalItemsQuantity} `,
       { margin: 3, color: { dark: "#333333ff" } },
       (err, url) => {
         return setQrcode(url);
       }
     );
-  }, [cartItems]);
+  }, [cartItems, totalItemsQuantity]);
   return (
     <div className="receiptContainer">
       <img
@@ -47,6 +55,11 @@ function Receipt({ cartItems, handleRemoveItem, handleAddItem }) {
             </div>
           ))}
       </div>
+      {totalItemsQuantity !== 0 && (
+        <span className="total-quantity-receipt">
+          Quantité totale: {totalItemsQuantity}
+        </span>
+      )}
       {cartItems.length !== 0 && (
         <img className="img-qrcode" src={qrcode} alt="QR Code" />
       )}
