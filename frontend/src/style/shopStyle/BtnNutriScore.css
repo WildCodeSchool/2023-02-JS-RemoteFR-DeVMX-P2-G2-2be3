@@ -8,6 +8,24 @@
 .btnNutriScore > li > button {
   margin: 0 5vw;
   height: 45px;
+  padding: 0.3rem;
+  border: 1px solid gray;
+  border-radius: 20px;
+  box-shadow: 1px 3px 8px 1px rgba(0, 0, 0, 0.3);
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+
+@media screen and (min-width: 795px) {
+  .btnNutriScore > li > button {
+    margin: 0 2vw;
+    padding: 0;
+    width: 25px;
+  }
+}
+
+.btnNutriScoreLiButton {
+  padding: 0rem;
   border: 1px solid gray;
   border-radius: 20px;
   box-shadow: 1px 3px 8px 1px rgba(0, 0, 0, 0.3);
@@ -53,4 +71,15 @@
   color: whitesmoke;
   font-size: 1.3rem;
   font-weight: bold;
+}
+
+@media screen and (min-width: 550px) {
+  .btnA,
+  .btnB,
+  .btnC,
+  .btnD,
+  .btnE {
+    margin-right: 3rem;
+    padding: 0.3rem;
+  }
 }

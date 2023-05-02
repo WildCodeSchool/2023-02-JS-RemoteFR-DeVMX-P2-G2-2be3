@@ -1,9 +1,25 @@
-/* eslint-disable import/no-unresolved */
-// eslint-disable-next-line import/no-unresolved
-import logoNutridriveNB from "@assets/logoNutridriveNB.png";
-import qrcode from "@assets/qrcode.png";
+import { useEffect, useState } from "react";
+import { PropTypes } from "prop-types";
+import QRcode from "qrcode";
+import logoNutridriveNB from "../../assets/logoNutridriveNB.png";
+import BasketReceiptQuantityButtons from "./BasketReceiptQuantityButtons";
 
-function Receipt() {
+function Receipt({ cartItems, handleRemoveItem, handleAddItem }) {
+  const [qrcode, setQrcode] = useState("");
+
+  useEffect(() => {
+    const cartItemsQrcode = cartItems.map(
+      (item) => `${item.product_name_fr}.......X${item.quantity}\n`
+    );
+
+    QRcode.toDataURL(
+      cartItemsQrcode,
+      { margin: 3, color: { dark: "#6dc96bff" } },
+      (err, url) => {
+        return setQrcode(url);
+      }
+    );
+  }, [cartItems]);
   return (
     <div className="receiptContainer">
       <img
@@ -16,22 +32,34 @@ function Receipt() {
         Micheline
       </h2>
       <div className="receipt-details">
-        <p>Pizza, tomate, mozza....................................x1</p>
-        <p>Céréales Bjorg, flocon..................................x2</p>
-        <p>Pizza, tomate, mozza....................................x1</p>
-        <p>Céréales Bjorg, flocon..................................x2</p>
-        <p>Pizza, tomate, mozza....................................x1</p>
-        <p>Céréales Bjorg, flocon..................................x2</p>
-        <p>Pizza, tomate, mozza....................................x1</p>
-        <p>Céréales Bjorg, flocon..................................x2</p>
-        <p>Pizza, tomate, mozza....................................x1</p>
-        <p>Céréales Bjorg, flocon..................................x2</p>
+        {cartItems &&
+          cartItems.map((item) => (
+            <div className="item-receipt" key={item.id}>
+              <span className="item-receipt-title">{item.product_name_fr}</span>
+              <span className="item-receipt-space">........</span>
+              <span className="item-receipt-quantity">{item.quantity}</span>
+              <BasketReceiptQuantityButtons
+                handleRemoveItem={handleRemoveItem}
+                handleAddItem={handleAddItem}
+                cartItems={cartItems}
+                itemInReceipt={item}
+              />
+            </div>
+          ))}
       </div>
-      <img className="img-qrcode" src={qrcode} alt="QR Code" />
+      {cartItems.length !== 0 && (
+        <img className="img-qrcode" src={qrcode} alt="QR Code" />
+      )}
       <h1>MERCI DE VOTRE VISITE</h1>
       <h1>A BIENTÔT</h1>
     </div>
   );
 }
+
+Receipt.propTypes = {
+  cartItems: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
+  handleRemoveItem: PropTypes.func.isRequired,
+  handleAddItem: PropTypes.func.isRequired,
+};
 
 export default Receipt;

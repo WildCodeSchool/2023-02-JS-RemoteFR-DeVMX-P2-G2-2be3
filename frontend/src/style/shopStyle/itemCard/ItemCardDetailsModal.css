@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.itemCardDetailsModal-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.modal-details {
+  max-width: 80%;
+  height: 80vh;
+  width: 80%;
+  padding: 2rem;
+  color: black;
+  background-color: whitesmoke;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 1rem;
+  overflow-y: auto;
+  stroke-dasharray: 1120;
+  stroke-width: 5px;
+  border-bottom: 5px solid rgb(51, 80, 70);
+  border-right: 5px solid rgb(51, 80, 70);
+  transition-timing-function: linear;
+  transition: stroke-dashoffset 4s, stroke-dasharray 4s;
+}
+
+.button-modal-details {
+  padding: 0.3rem;
+  border: none;
+  background-color: whitesmoke;
+  margin-left: 90%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button-modal-details:hover {
+  transform: scale(1.2);
+}
+
+.itemCardDetailsModal-title {
+  text-align: center;
+  font-size: 1.2rem;
+  border: 2mm ridge rgba(211, 220, 50, 0.6);
+  border-radius: 30%;
+  background-color: rgb(51, 80, 70);
+  color: rgb(230, 231, 222);
+  padding: 10px;
+}
+
+.imageAndNutriScore-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.figureDetailsModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.figureDetailsModal img {
+  margin-bottom: 0.5rem;
+}
+
+.imgborder {
+  display: inline-block;
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 5px;
+  background: #f2f2f2;
+}
+
+.s1 {
+  -webkit-box-shadow: 0 28px 16px -26px rgba(0, 0, 0);
+  -moz-box-shadow: 0 28px 16px -26px rgba(0, 0, 0);
+  box-shadow: 0 28px 16px -26px rgba(0, 0, 0);
+}
+
+.figcaption-modal-image {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.btnNutriScoreIcon {
+  margin: 0 5vw;
+  padding: 0.3rem;
+  border: 1px solid gray;
+  border-radius: 20px;
+  box-shadow: 1px 3px 8px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btnA {
+  background: rgb(2, 125, 64);
+  color: whitesmoke;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.btnB {
+  background: rgb(129, 181, 47);
+  color: whitesmoke;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.btnC {
+  background: rgb(246, 197, 6);
+  color: whitesmoke;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.btnD {
+  background: rgb(231, 126, 0);
+  color: whitesmoke;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.btnE {
+  background: rgb(222, 60, 18);
+  color: whitesmoke;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.nutri-score-label {
+  font-size: 0.7rem;
+}
+
+.modal-ingredients-details {
+  margin-top: 1rem;
+  text-align: center;
+  line-height: 24px;
+  overflow-y: initial;
+  border-style: dashed double;
+  border-radius: 10%;
+  border-color: black;
+  background-color: #5cb85c;
+  color: white;
+  font-size: italic;
+}
+
+@media screen and (min-width: 414px) {
+  .modal-details {
+    max-width: 75%;
+    height: 80vh;
+  }
+  .modal-ingredients-details {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal-details {
+    max-width: 60%;
+    height: 80vh;
+  }
+}
