@@ -9,13 +9,17 @@ import "../style/Basket/BasketReceipt.css";
 import "../style/Header.css";
 import "../style/Basket/ModalButtonValide.css";
 
-function Basket({ user, cartItems }) {
+function Basket({ user, cartItems, handleRemoveItem, handleAddItem }) {
   return (
     <div className="basket">
       <Header user={user} />
       <div className="basketTicketContainer">
         <ButtonReturn />
-        <Receipt cartItems={cartItems} />
+        <Receipt
+          handleRemoveItem={handleRemoveItem}
+          handleAddItem={handleAddItem}
+          cartItems={cartItems}
+        />
         <ButtonValide />
       </div>
       <NetworkFooter />
@@ -26,6 +30,8 @@ function Basket({ user, cartItems }) {
 Basket.propTypes = {
   user: PropTypes.string.isRequired,
   cartItems: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
+  handleRemoveItem: PropTypes.func.isRequired,
+  handleAddItem: PropTypes.func.isRequired,
 };
 
 export default Basket;

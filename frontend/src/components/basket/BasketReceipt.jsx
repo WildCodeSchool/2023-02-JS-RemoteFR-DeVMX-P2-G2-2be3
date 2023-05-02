@@ -1,8 +1,9 @@
 import { PropTypes } from "prop-types";
 import logoNutridriveNB from "../../assets/logoNutridriveNB.png";
 import qrcode from "../../assets/qr_code.png";
+import BasketReceiptQuantityButtons from "./BasketReceiptQuantityButtons";
 
-function Receipt({ cartItems }) {
+function Receipt({ cartItems, handleRemoveItem, handleAddItem }) {
   return (
     <div className="receiptContainer">
       <img
@@ -21,6 +22,12 @@ function Receipt({ cartItems }) {
               <span>{item.product_name_fr}</span>
               <span>........</span>
               <span>{item.quantity}</span>
+              <BasketReceiptQuantityButtons
+                handleRemoveItem={handleRemoveItem}
+                handleAddItem={handleAddItem}
+                cartItems={cartItems}
+                itemInReceipt={item}
+              />
             </div>
           ))}
       </div>
@@ -33,6 +40,8 @@ function Receipt({ cartItems }) {
 
 Receipt.propTypes = {
   cartItems: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
+  handleRemoveItem: PropTypes.func.isRequired,
+  handleAddItem: PropTypes.func.isRequired,
 };
 
 export default Receipt;

@@ -59,7 +59,15 @@ function App() {
       />
       <Route
         path="/basket"
-        element={<Basket user={user} setUser={setUser} cartItems={cartItems} />}
+        element={
+          <Basket
+            user={user}
+            setUser={setUser}
+            cartItems={cartItems}
+            handleRemoveItem={handleRemoveItem}
+            handleAddItem={handleAddItem}
+          />
+        }
       />
     </Routes>
   );
