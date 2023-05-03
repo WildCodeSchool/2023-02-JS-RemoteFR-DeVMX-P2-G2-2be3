@@ -18,6 +18,7 @@
   overflow-y: scroll;
   position: fixed;
   font-family: "Roboto", sans-serif;
+  align-content: flex-start;
 }
 
 @media screen and (min-width: 796px) {
@@ -40,10 +41,10 @@
 
 @media screen and (min-height: 900px) {
   .itemCard-section {
+    margin-left: 2.5rem;
     height: 77vh;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
   }
 }
 
