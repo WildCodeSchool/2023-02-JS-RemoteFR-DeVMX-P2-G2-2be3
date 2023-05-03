@@ -22,7 +22,7 @@ function Receipt({ cartItems, handleRemoveItem, handleAddItem }) {
 
     QRcode.toDataURL(
       `${cartItemsQrcode}\n Quantité totale: ${totalItemsQuantity} `,
-      { margin: 3, color: { dark: "#333333ff" } },
+      { margin: 3, color: { dark: "#333333ff", light: "#EBEDEC00" } },
       (err, url) => {
         return setQrcode(url);
       }
