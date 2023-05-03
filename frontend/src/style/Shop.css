@@ -94,5 +94,6 @@
 }
 
 .fill-section {
+  position: absolute;
   flex-grow: 1;
 }
