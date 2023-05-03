@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { PropTypes } from "prop-types";
 import QRcode from "qrcode";
 import logoNutridriveNB from "../../assets/logoNutridriveNB.png";
-import BasketReceiptQuantityButtons from "./BasketReceiptQuantityButtons";
+import ItemCardQuantityButton from "../shop/itemCard/ItemCardQuantityButton";
 
 function Receipt({ cartItems, handleRemoveItem, handleAddItem }) {
   const [qrcode, setQrcode] = useState("");
@@ -22,7 +22,7 @@ function Receipt({ cartItems, handleRemoveItem, handleAddItem }) {
 
     QRcode.toDataURL(
       `${cartItemsQrcode}\n Quantité totale: ${totalItemsQuantity} `,
-      { margin: 3, color: { dark: "#333333ff" } },
+      { margin: 3, color: { dark: "#333333ff", light: "#EBEDEC00" } },
       (err, url) => {
         return setQrcode(url);
       }
@@ -42,19 +42,29 @@ function Receipt({ cartItems, handleRemoveItem, handleAddItem }) {
       <div className="receipt-details">
         {cartItems &&
           cartItems.map((item) => (
-            <div className="item-receipt" key={item.id}>
-              <span className="item-receipt-title">{item.product_name_fr}</span>
-              <span className="item-receipt-space">........</span>
-              <span className="item-receipt-quantity">{item.quantity}</span>
-              <BasketReceiptQuantityButtons
-                handleRemoveItem={handleRemoveItem}
-                handleAddItem={handleAddItem}
-                cartItems={cartItems}
-                itemInReceipt={item}
-              />
+            <div key={item.id}>
+              <div className="description-quantity-items">
+                <span>{item.product_name_fr.substr(0, 30)}</span>
+                <span>
+                  {".".repeat(
+                    35 -
+                      item.product_name_fr.substr(0, 30).length -
+                      item.quantity.toString().length
+                  )}
+                </span>
+                <span>{item.quantity}</span>
+                <div className="button-change-quantity">
+                  <ItemCardQuantityButton
+                    product={item}
+                    handleRemoveItem={handleRemoveItem}
+                    handleAddItem={handleAddItem}
+                  />
+                </div>
+              </div>
             </div>
           ))}
       </div>
+
       {totalItemsQuantity !== 0 && (
         <span className="total-quantity-receipt">
           Quantité totale: {totalItemsQuantity}

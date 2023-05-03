@@ -40,8 +40,8 @@ function Shop({
         </section>
       </div>
       <section className="itemCard-section">
-        {loading && <Loader />}
         {loading && <div className="fill-section" />}
+        {loading && <Loader />}
         {data &&
           data
             .filter(

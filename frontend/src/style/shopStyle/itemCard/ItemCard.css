@@ -80,10 +80,36 @@
 .favorite-icon {
   margin-bottom: 0.4rem;
   cursor: pointer;
+  animation: animateHeartOut 0.3s linear forwards;
 }
 
 .isFavorite {
   color: red;
+  /* color: #ffffff; */
+  /* background: #333333; */
+  text-shadow: white 0px 0px 2px, orange 0px 0px 2px, red 0px 0px 3px;
+  animation: animateHeart 0.3s linear forwards;
+}
+
+@keyframes animateHeart {
+  0% {
+    transform: scale(0.2);
+  }
+  40% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animateHeartOut {
+  0% {
+    transform: scale(1.8);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @media screen and (min-width: 550px) {

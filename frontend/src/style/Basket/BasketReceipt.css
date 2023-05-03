@@ -4,7 +4,7 @@
   background-image: url(/src/assets/crump_paper.jpg);
   background-size: 50vw;
   margin: auto;
-  padding: 10px;
+  padding: 10px 5px;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,7 @@
   text-align: center;
   box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.5);
   font-family: "Fira Mono", monospace;
+  letter-spacing: -0.5px;
 }
 
 .img-nutridrive_logo {
@@ -39,24 +40,25 @@
 }
 
 .img-qrcode {
+  margin-bottom: 1rem;
   width: 50%;
   opacity: 70%;
 }
 
-.item-receipt {
+.description-quantity-items {
+  padding: 2px 0;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  margin-bottom: 0.3rem;
+  font-size: 1.7vw;
 }
 
-.item-receipt-title {
-  width: 50%;
-  text-align: left;
+.button-change-quantity {
+  display: flex;
+  float: right;
 }
 
-.item-receipt-quantity {
-  font-size: 2.5vw;
+.button-change-quantity .material-symbols-outlined {
+  font-size: 2vw;
 }
 
 .total-quantity-receipt {
@@ -64,4 +66,13 @@
   font-size: 2.5vw;
   color: rgba(70, 70, 70, 0.7);
   margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 768px){
+  .receiptContainer{
+   width: 35%;
+  }
+  .description-quantity-items{
+    font-size: 1.2vw;
+  }
 }
