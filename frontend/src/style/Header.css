@@ -1,6 +1,18 @@
 header .imgLogoHeader {
-  width: auto;
-  max-height: 7vh;
+  width: 100px;
+  height: auto;
+}
+
+@media screen and (min-width: 794px) {
+  header .imgLogoHeader {
+    width: 180px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  header .imgLogoHeader {
+    width: 200px;
+  }
 }
 
 header {
