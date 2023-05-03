@@ -3,14 +3,13 @@ header .imgLogoHeader {
   height: auto;
 }
 
-
-@media screen and (min-width: 794px){
+@media screen and (min-width: 794px) {
   header .imgLogoHeader {
     width: 180px;
   }
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1000px) {
   header .imgLogoHeader {
     width: 200px;
   }
