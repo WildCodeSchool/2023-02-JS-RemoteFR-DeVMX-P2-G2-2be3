@@ -10,6 +10,7 @@
 
 @media screen and (min-width: 795px) {
   .search-section > div > select {
+    margin-top: 70px;
     width: 30vw;
   }
 }

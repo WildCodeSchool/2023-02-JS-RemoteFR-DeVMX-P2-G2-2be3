@@ -18,6 +18,7 @@
 
 @media screen and (min-width: 795px) {
   .btnNutriScore > li > button {
+    margin-top: 70px;
     margin: 0 2vw;
     padding: 0;
     width: 25px;
