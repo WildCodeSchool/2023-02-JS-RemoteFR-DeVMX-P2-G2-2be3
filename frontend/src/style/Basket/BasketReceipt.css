@@ -30,6 +30,7 @@
   margin-bottom: 30%;
   font-size: 1.7vw;
   color: rgba(70, 70, 70, 0.7);
+  margin-left: -1rem;
 }
 
 .receiptContainer h1 {
@@ -39,24 +40,24 @@
 }
 
 .img-qrcode {
+  margin-bottom: 1rem;
   width: 50%;
   opacity: 70%;
 }
 
-.item-receipt {
+.description-quantity-items {
+  float: left;
+  line-height: 1.2rem;
+}
+
+.button-change-quantity {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-bottom: 0.3rem;
+  float: right;
+  width: 1rem;
 }
 
-.item-receipt-title {
-  width: 50%;
-  text-align: left;
-}
-
-.item-receipt-quantity {
-  font-size: 2.5vw;
+.button-change-quantity .material-symbols-outlined {
+  font-size: 2vw;
 }
 
 .total-quantity-receipt {
