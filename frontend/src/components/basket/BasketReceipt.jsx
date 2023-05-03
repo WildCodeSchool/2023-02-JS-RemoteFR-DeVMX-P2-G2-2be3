@@ -53,13 +53,13 @@ function Receipt({ cartItems, handleRemoveItem, handleAddItem }) {
                   )}
                 </span>
                 <span>{item.quantity}</span>
-              </div>
-              <div className="button-change-quantity">
-                <ItemCardQuantityButton
-                  product={item}
-                  handleRemoveItem={handleRemoveItem}
-                  handleAddItem={handleAddItem}
-                />
+                <div className="button-change-quantity">
+                  <ItemCardQuantityButton
+                    product={item}
+                    handleRemoveItem={handleRemoveItem}
+                    handleAddItem={handleAddItem}
+                  />
+                </div>
               </div>
             </div>
           ))}
