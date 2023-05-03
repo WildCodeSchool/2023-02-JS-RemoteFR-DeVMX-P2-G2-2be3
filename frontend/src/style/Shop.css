@@ -19,6 +19,7 @@
   position: fixed;
   font-family: "Roboto", sans-serif;
   transition: height 100ms ease-in;
+  align-content: flex-start;
 }
 
 @media screen and (min-width: 794px) {
