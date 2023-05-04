@@ -6,12 +6,14 @@ import "../../style/Basket/ButtonBasket.css";
 
 function ButtonBasket() {
   return (
-    <button className="btnBasket" type="button">
+    <div>
       <Link to="/basket">
-        <img className="imgBtnBasket" src={ImgBasket} alt="Basket" />
-        <span className="txtBtnBasket">Panier</span>
+        <div className="imgBtnBasketContainer">
+          <img className="imgBtnBasket" src={ImgBasket} alt="Basket" />
+          <span className="txtBtnBasket">Panier</span>
+        </div>
       </Link>
-    </button>
+    </div>
   );
 }
 
