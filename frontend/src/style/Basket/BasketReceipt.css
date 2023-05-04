@@ -68,11 +68,11 @@
   margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 768px){
-  .receiptContainer{
-   width: 35%;
+@media screen and (min-width: 768px) {
+  .receiptContainer {
+    width: 35%;
   }
-  .description-quantity-items{
+  .description-quantity-items {
     font-size: 1.2vw;
   }
 }
