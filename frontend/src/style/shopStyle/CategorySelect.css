@@ -8,6 +8,17 @@
   padding-left: 10px;
 }
 
+.search-section > div > select:hover {
+  background: #d4f6b5;
+  border: 2px solid gray;
+  border-radius: 10px;
+  font-size:large;
+  box-shadow: 0px 0px 10px 4px rgb(255, 255, 255);
+  color:#3a4b3d;
+  font-weight: bold;
+  transition: 0.25s ease-in-out;
+}
+
 @media screen and (min-width: 795px) {
   .search-section > div > select {
     margin-top: 70px;
