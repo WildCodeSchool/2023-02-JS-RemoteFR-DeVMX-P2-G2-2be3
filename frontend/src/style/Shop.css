@@ -102,7 +102,6 @@
 @media screen and (min-width: 794px) and (min-height: 750px) {
   .itemCard-section {
     height: calc(0.73 * 100vh);
-
   }
 }
 
@@ -132,13 +131,13 @@
 
 @media screen and (min-width: 794px) and (min-height: 1000px) {
   .itemCard-section {
-    height: calc(0.80 * 100vh);
+    height: calc(0.8 * 100vh);
   }
 }
 
 @media screen and (min-width: 794px) and (min-height: 1050px) {
   .itemCard-section {
-    height: calc(0.80 * 100vh);
+    height: calc(0.8 * 100vh);
   }
 }
 
