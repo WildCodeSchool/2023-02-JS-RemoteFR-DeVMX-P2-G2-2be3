@@ -1,7 +1,7 @@
 footer {
   width: 100vw;
   height: 50px;
-  padding: 2%;
+  padding:  0 2%;
   position: relative;
   bottom: 0;
   display: flex;
