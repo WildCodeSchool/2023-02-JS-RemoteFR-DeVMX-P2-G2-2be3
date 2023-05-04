@@ -83,7 +83,7 @@
     height: calc(0.67 * 100vh);
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    margin: 0 4vw;
   }
 }
 
